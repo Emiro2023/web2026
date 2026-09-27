@@ -22,3 +22,14 @@ are not copied here. Install them as a plugin instead:
 ```
 
 To update, re-copy the folders from a newer checkout of anthropics/skills.
+
+## Engineering team skills (alirezarezvani/claude-skills)
+
+The 34 skill folders from `engineering-team/skills/` in
+[alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills), vendored at
+commit `19392f7a08264ed00486a251f5b2098321771f94`. MIT license: see
+`LICENSE-claude-skills-MIT.txt`.
+
+They cover architecture, frontend, backend, fullstack, QA, TDD, code review, DevOps,
+cloud (AWS, Azure, GCP), security, incident response, data, ML and Stripe. Start from
+`engineering-skills/SKILL.md` for an index.
