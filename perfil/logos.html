@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{margin:0;background:#fff}
+svg{display:block}
+</style></head><body>
+
+<!-- 1. EAM Sound Co. : lettering a rayas estilo corporativo 90s -->
+<svg id="c1" width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="stripes" width="1000" height="22" patternUnits="userSpaceOnUse">
+      <rect width="1000" height="14" fill="#fff"/>
+    </pattern>
+    <mask id="m1"><rect width="1000" height="1000" fill="url(#stripes)"/></mask>
+  </defs>
+  <rect width="1000" height="1000" fill="#0b2a5b"/>
+  <text x="500" y="560" text-anchor="middle" font-family="Liberation Serif" font-weight="700" font-size="300" letter-spacing="10" fill="#fff" mask="url(#m1)">EAM</text>
+  <line x1="300" y1="640" x2="700" y2="640" stroke="#c9a54a" stroke-width="4"/>
+  <text x="500" y="700" text-anchor="middle" font-family="Liberation Sans" font-size="40" letter-spacing="14" fill="#fff">SOUND CO.</text>
+</svg>
+
+<!-- 2. Meridian Audio : globo con meridianos -->
+<svg id="c2" width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="1000" fill="#f2efe6"/>
+  <g transform="translate(500,420)" fill="none" stroke="#0f5e6b" stroke-width="10">
+    <circle r="190"/>
+    <ellipse rx="95" ry="190"/>
+    <line x1="0" y1="-190" x2="0" y2="190"/>
+    <path d="M-190 0 H190"/>
+    <path d="M-165 -95 H165 M-165 95 H165" stroke-width="6"/>
+  </g>
+  <path d="M250 470 Q500 330 760 300" fill="none" stroke="#b3202a" stroke-width="16" stroke-linecap="round"/>
+  <text x="500" y="720" text-anchor="middle" font-family="Liberation Serif" font-size="92" letter-spacing="12" fill="#0b2a5b">MERIDIAN</text>
+  <text x="500" y="785" text-anchor="middle" font-family="Liberation Sans" font-size="36" letter-spacing="22" fill="#0f5e6b">AUDIO</text>
+</svg>
+
+<!-- 3. EAMTONE : cuadrado rojo, italic, tipo electrónica japonesa 90s -->
+<svg id="c3" width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="1000" fill="#ffffff"/>
+  <rect x="190" y="330" width="620" height="260" fill="#c8102e"/>
+  <text x="500" y="508" text-anchor="middle" font-family="Liberation Sans" font-weight="700" font-style="italic" font-size="150" letter-spacing="-4" fill="#fff">eamtone</text>
+  <text x="500" y="660" text-anchor="middle" font-family="Liberation Sans" font-size="34" letter-spacing="16" fill="#1a1a1a">SOUND SYSTEMS</text>
+</svg>
+
+<!-- 4. Monotone Inc. : onda senoidal en círculo -->
+<svg id="c4" width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="1000" fill="#1c1c1c"/>
+  <circle cx="500" cy="420" r="170" fill="#e8e2d0"/>
+  <path d="M345 420 C395 320, 445 320, 500 420 S605 520, 655 420" fill="none" stroke="#1c1c1c" stroke-width="18" stroke-linecap="round"/>
+  <text x="500" y="710" text-anchor="middle" font-family="Liberation Serif" font-size="84" letter-spacing="14" fill="#e8e2d0">MONOTONE</text>
+  <text x="500" y="770" text-anchor="middle" font-family="Liberation Serif" font-style="italic" font-size="40" letter-spacing="6" fill="#9a927c">Incorporated</text>
+</svg>
+</body></html>
