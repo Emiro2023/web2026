@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 -40 480 560" width="480" height="560" font-family="Arial, sans-serif" font-size="10">
+  <!-- Escala: 1 px = 5 mm. Closet 1800 x 2400 mm visto de frente SIN puertas -->
+  <rect x="-60" y="-40" width="480" height="560" fill="#fff"/>
+  <g stroke="#333" stroke-width="1" fill="#f3ead8">
+    <!-- carcasa -->
+    <rect x="0" y="0" width="360" height="480"/>
+  </g>
+  <g fill="#e2d3b3" stroke="#333" stroke-width="1">
+    <!-- zócalo -->
+    <rect x="3" y="464" width="354" height="16"/>
+    <!-- maletero (repisa fija a 1985 mm del piso = y 83) -->
+    <rect x="3" y="80" width="354" height="3"/>
+    <!-- divisiones -->
+    <rect x="119" y="83" width="3" height="378"/>
+    <rect x="238" y="83" width="3" height="378"/>
+    <!-- divisiones maletero -->
+    <rect x="119" y="3" width="3" height="77"/>
+    <rect x="238" y="3" width="3" height="77"/>
+    <!-- Columna A: repisa zapatos a 300 mm -->
+    <rect x="3" y="417" width="116" height="3"/>
+    <!-- Columna B: repisas -->
+    <rect x="122" y="140" width="116" height="3"/>
+    <rect x="122" y="200" width="116" height="3"/>
+    <rect x="122" y="260" width="116" height="3"/>
+    <rect x="122" y="320" width="116" height="3"/>
+    <!-- Columna B: 3 cajones -->
+    <rect x="123" y="328" width="114" height="42" fill="#cdb98f"/>
+    <rect x="123" y="372" width="114" height="42" fill="#cdb98f"/>
+    <rect x="123" y="416" width="114" height="44" fill="#cdb98f"/>
+    <!-- Columna C: repisa intermedia a 1000 mm -->
+    <rect x="241" y="277" width="116" height="3"/>
+  </g>
+  <!-- tubos -->
+  <g stroke="#666" stroke-width="3">
+    <line x1="6" y1="100" x2="116" y2="100"/>
+    <line x1="244" y1="100" x2="354" y2="100"/>
+    <line x1="244" y1="295" x2="354" y2="295"/>
+  </g>
+  <!-- ropa colgada (indicativa) -->
+  <g fill="none" stroke="#9aa" stroke-dasharray="3 2">
+    <rect x="15" y="104" width="92" height="290"/>
+    <rect x="253" y="104" width="92" height="165"/>
+    <rect x="253" y="299" width="92" height="160"/>
+  </g>
+  <g fill="#333" text-anchor="middle">
+    <text x="60" y="45">Maletero</text><text x="180" y="45">Maletero</text><text x="300" y="45">Maletero</text>
+    <text x="60" y="250">Colgado largo</text><text x="60" y="262">(vestidos, abrigos)</text>
+    <text x="60" y="445">Zapatos</text>
+    <text x="180" y="175">Repisas</text><text x="180" y="235">(ajustables)</text>
+    <text x="180" y="353">Cajón</text><text x="180" y="397">Cajón</text><text x="180" y="442">Cajón</text>
+    <text x="300" y="190">Colgado corto</text><text x="300" y="202">(camisas)</text>
+    <text x="300" y="385">Colgado corto</text><text x="300" y="397">(pantalones)</text>
+  </g>
+  <!-- cotas -->
+  <g stroke="#c33" fill="#c33" text-anchor="middle">
+    <line x1="0" y1="500" x2="360" y2="500"/>
+    <text x="180" y="514" stroke="none">1800 mm</text>
+    <line x1="0" y1="-12" x2="120" y2="-12"/><text x="60" y="-18" stroke="none">600</text>
+    <line x1="120" y1="-12" x2="240" y2="-12"/><text x="180" y="-18" stroke="none">600</text>
+    <line x1="240" y1="-12" x2="360" y2="-12"/><text x="300" y="-18" stroke="none">600</text>
+    <line x1="-20" y1="0" x2="-20" y2="480"/>
+    <text x="-30" y="240" stroke="none" transform="rotate(-90 -30 240)">2400 mm (prof. 600)</text>
+  </g>
+</svg>
