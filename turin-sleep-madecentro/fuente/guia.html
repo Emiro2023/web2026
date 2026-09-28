@@ -1,0 +1,434 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Manual Turín + Sleep</title><style>
+@page { size: A4; margin: 13mm 12mm 14mm; }
+:root { --ink:#2b2622; --muted:#6f655b; --teal:#2f7d78; --or:#d9793f; --line:#e2d9cb; --bg:#f6f2ec; }
+* { box-sizing: border-box; }
+body { margin:0; font-family:"Liberation Sans","DejaVu Sans",Arial,sans-serif; color:var(--ink); font-size:10.5pt; line-height:1.38; }
+h1 { font-size:28pt; line-height:1.05; margin:0 0 6px; letter-spacing:-.01em; }
+h2 { font-size:16pt; margin:0 0 10px; padding-bottom:6px; border-bottom:3px solid var(--teal); }
+h2 .n { display:inline-block; background:var(--teal); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:13pt; margin-right:8px; }
+h3 { font-size:12pt; margin:0 0 4px; }
+.page { page-break-after: always; }
+.page:last-child { page-break-after: auto; }
+.kick { color:var(--teal); font-weight:700; letter-spacing:.14em; text-transform:uppercase; font-size:9pt; }
+.sub { color:var(--muted); font-size:12pt; margin:0 0 12px; }
+.cover img { width:100%; border-radius:10px; }
+.kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:12px 0; }
+.kpi { background:var(--bg); border-radius:10px; padding:10px 12px; }
+.kpi b { display:block; font-size:17pt; }
+.kpi span { color:var(--muted); font-size:8.5pt; text-transform:uppercase; letter-spacing:.06em; }
+table { width:100%; border-collapse:collapse; margin:6px 0 12px; font-size:9.5pt; }
+th { text-align:left; background:var(--bg); color:var(--muted); font-size:8pt; text-transform:uppercase; letter-spacing:.05em; padding:5px 6px; }
+td { padding:4px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+td.id { font-weight:700; color:var(--teal); white-space:nowrap; }
+td.n { white-space:nowrap; text-align:right; font-variant-numeric:tabular-nums; }
+td.c { font-size:8.8pt; color:#444; }
+.box { background:var(--bg); border-radius:10px; padding:10px 14px; margin:8px 0; }
+.tip { background:#fff3e8; border-left:4px solid var(--or); padding:6px 10px; margin-top:6px; font-size:9.5pt; border-radius:4px; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.fig svg { width:100%; height:auto; } .r1 svg { max-height:98mm; } .r2 svg { max-height:78mm; } .r3 svg { max-height:46mm; }
+.paso { display:grid; grid-template-columns:34% 1fr; gap:10px; margin:0 0 7px; font-size:9.6pt; break-inside:avoid; border:1px solid var(--line); border-radius:10px; padding:8px; }
+.pimg { position:relative; } .pimg img { width:100%; border-radius:8px; display:block; }
+.pn { position:absolute; left:6px; top:6px; background:var(--or); color:#fff; font-weight:800; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; }
+.pz { font-size:9pt; color:var(--teal); font-weight:700; margin-bottom:3px; }
+ol, ul { margin:4px 0 0 18px; padding:0; } li { margin:2px 0; }
+.check li { list-style:none; margin-left:-18px; } .check li:before { content:"☐ "; }
+.small { font-size:8.8pt; color:var(--muted); }
+.legend span { display:inline-block; width:12px; height:12px; border:1px solid #333; vertical-align:-2px; margin:0 4px 0 12px; }
+</style></head><body>
+
+<section class="page cover">
+<div class="kick">Manual de corte y armado · réplicas para fabricar con Madecentro</div>
+<h1>Cómoda Turín + nochero Sleep</h1>
+<p class="sub">Melamina RH 15 mm · <b>1 sola lámina</b> de 2,15 × 2,44 m · frentes embutidos, sin manijas, sobre patas</p>
+<img src="../renders/set2-hero.png">
+<div class="kpis">
+ <div class="kpi"><b>80×86×40</b><span>cómoda Turín (cm)</span></div>
+ <div class="kpi"><b>50×52×40</b><span>nochero Sleep (cm)</span></div>
+ <div class="kpi"><b>20 + 6</b><span>piezas de melamina</span></div>
+ <div class="kpi"><b>≈ $535.000</b><span>el juego (blanco)</span></div>
+</div>
+<div class="box"><b>Contenido:</b> 1. Los originales y comparación de precio · 2. Compra · 3. Tablero y plano de corte ·
+4. Lista de piezas y cantos · 5. Uniones: cómo se fija cada pieza · 6. Medidas de perforación · 7. Armado de la cómoda ·
+8. Armado del nochero · 9. Herramientas, revisión y cuidados</div>
+<p class="small">Medidas en mm. Sierra 4 mm, refilado 10 mm por borde. 💲 = precio visto en madecentro.com u homecenter.com.co (sept. 2026); lo demás es estimado.</p>
+</section>
+
+<section class="page">
+<h2><span class="n">1</span>Los originales y comparación de precio</h2>
+<div class="grid2">
+<div><img src="../renders/turin-open.png" style="width:100%;border-radius:8px">
+<h3>Cómoda Turín · Just Home Collection</h3>
+<p class="small">Homecenter, código 628936 · 80 × 86 × 40 cm · Niebla Blanco o madera · <b>2 cajones</b> (el de arriba con cerradura) +
+<b>2 puertas</b> con repisa · frentes embutidos sin manijas (se abren por las ranuras) · patas pequeñas. 💲 $449.900 (armado opcional $92.900).</p></div>
+<div><img src="../renders/sleep-open.png" style="width:100%;border-radius:8px">
+<h3>Nochero Velador Sleep S-52 · Rta Design</h3>
+<p class="small">Homecenter, código 677789, modelo MDB 7222 · alto 52, ancho 50, fondo 40 cm · nicho abierto arriba +
+<b>1 puerta embutida</b> (bisagras a la derecha) sin manija · 4 patas negras · Duna por fuera, blanco por dentro. 💲 $174.900 (antes $289.900).</p></div>
+</div>
+<table>
+<tr><th>Mueble</th><th>Comprado en Homecenter</th><th>Fabricado (estimado)</th><th>Ahorro</th></tr>
+<tr><td>Cómoda Turín</td><td class="n">$449.900</td><td class="n"><b>≈ $405.000</b> ($355.000 – $455.000)</td><td class="n">≈ $45.000</td></tr>
+<tr><td>Nochero Sleep (del sobrante de la misma lámina)</td><td class="n">$174.900</td><td class="n"><b>≈ $130.000</b> ($115.000 – $150.000)</td><td class="n">≈ $45.000</td></tr>
+<tr><td><b>Juego</b></td><td class="n"><b>$624.800</b></td><td class="n"><b>≈ $535.000</b> ($470.000 – $605.000)</td><td class="n"><b>≈ $90.000 (14 %)</b></td></tr>
+</table>
+<div class="box small"><b>Ventajas de fabricarlo:</b> tablero <b>RH</b> (resiste humedad), rieles metálicos de balineras, bisagras de cierre lento,
+canto en los bordes de abajo y el mismo color en los dos muebles.<br>
+<b>Ojo:</b> un <b>segundo nochero</b> ya no cabe en la lámina; hacerlo solo cuesta ≈ $290.000, así que si quieres dos, el segundo sale mejor comprado.
+El original es bicolor (Duna por fuera, blanco por dentro): eso exigiría 2 láminas; aquí se propone todo de un color.</div>
+</section>
+
+<section class="page">
+<h2><span class="n">2</span>Lista de compra</h2>
+<table>
+<tr><th>Producto</th><th>Cant.</th><th>Para qué</th><th>Precio</th></tr>
+<tr><td>💲 Tablero melamina <b>blanco RH Primadera 15 mm, 2,15 × 2,44 m</b> (SKU AGPMRBS215)</td><td class="n">1</td><td>Todas las piezas de los dos muebles</td><td class="n">$266.410</td></tr>
+<tr><td>HDF 3 mm blanco 1,83 × 2,44 m</td><td class="n">1</td><td>Fondos (2) y bases de cajón (2)</td><td class="n">≈ $55.000 – $85.000</td></tr>
+<tr><td>Corte (26 piezas) + enchape canto PVC blanco 19/22 mm (≈ 27 m)</td><td class="n">—</td><td>"Tableros a la medida" en la web o en tienda</td><td class="n">≈ $90.000 – $170.000</td></tr>
+<tr><td>💲 Riel extensión total carga media 38 kg (Mobile) <b>35 cm</b></td><td class="n">2 pares</td><td>Cajones cómoda</td><td class="n">desde $5.917 el par</td></tr>
+<tr><td>💲 Bisagra cazoleta cierre lento Bonuit, aplicación <b>codo</b> (puerta embutida)</td><td class="n">2 pares</td><td>Puertas de la cómoda</td><td class="n">$3.137 el par*</td></tr>
+<tr><td>💲 Bisagra cazoleta eco slide on (Mobile), <b>codo</b>, sin cierre lento</td><td class="n">2</td><td>Puerta del nochero (con push)</td><td class="n">$1.707 c/u</td></tr>
+<tr><td>💲 Dispositivo push to open con imán (Bonuit)</td><td class="n">1</td><td>Abrir la puerta del nochero sin manija</td><td class="n">$3.030</td></tr>
+<tr><td>💲 Tornillo de ensamble <b>6 × 2"</b> zincado, caja × 100</td><td class="n">1 caja</td><td>Carcasas y cajas (≈ 50)</td><td class="n">$6.419</td></tr>
+<tr><td>Tornillo <b>6 × 1"</b></td><td class="n">≈ 16</td><td>Frentes de cajón y tapa de la cómoda</td><td class="n">≈ $5.000</td></tr>
+<tr><td>💲 Cantonera 19 × 12 mm + tornillo 6 × 5/8"</td><td class="n">6</td><td>4 tapa nochero · 2 anclaje cómoda</td><td class="n">$296 c/u</td></tr>
+<tr><td>Pata plástica negra ≈ 25 mm (con tornillo)</td><td class="n">8</td><td>4 por mueble</td><td class="n">≈ $1.500 – $3.000 c/u</td></tr>
+<tr><td>Pines de repisa 5 mm · puntillas 3/4" · 2 tacos 6 mm · tapatornillos</td><td class="n">4 · ≈120 · 2 · ≈20</td><td>Repisa, fondos, anclaje</td><td class="n">≈ $8.000</td></tr>
+<tr><td>Cerradura para cajón (opcional, como el original)</td><td class="n">1</td><td>Cajón superior</td><td class="n">≈ $10.000 – $20.000</td></tr>
+</table>
+<p class="small">* $3.137 es el precio de la versión "parche"; en el selector de la página elige <b>codo</b> (puerta embutida) y confirma el precio.
+Si no hay codo con cierre lento, usa la eco slide on codo de Mobile.</p>
+<div class="tip">El juego (≈ $535.000) supera los $500.001: aplica el envío a domicilio de Madecentro en ciudades principales.</div>
+</section>
+
+<section class="page">
+<h2><span class="n">3</span>Tablero y plano de corte</h2>
+<p><b>Tablero:</b> aglomerado melamínico RH 15 mm, laminado por las dos caras, 2150 × 2440 mm. Las 26 piezas caben en
+<b>una lámina</b> (uso 79 %). <span class="legend"><span style="background:#cfe3e1"></span>Cómoda <span style="background:#f6d3bf"></span>Nochero</span></p>
+<div class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1036 920" font-family="Liberation Sans, Arial, sans-serif">
+<rect x="30" y="30" width="976.0" height="860.0" fill="#efe8dd" stroke="#2b2622" stroke-width="2"/>
+<text x="30" y="20" font-size="14" font-weight="700" fill="#2b2622">Melamina RH 15 mm · 2440 × 2150 · 1 lámina · cómoda Turín + nochero Sleep</text>
+<text x="518.0" y="910.0" font-size="11" text-anchor="middle" fill="#666">2440 mm</text>
+<text x="20" y="460.0" font-size="11" text-anchor="middle" fill="#666" transform="rotate(-90 20 460.0)">2150 mm</text>
+<rect x="34.0" y="34.0" width="160.0" height="328.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="114.0" y="197.0" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T2</text>
+<text x="114.0" y="209.0" font-size="10" text-anchor="middle" fill="#444">820×400</text>
+<rect x="34.0" y="363.6" width="160.0" height="328.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="114.0" y="526.6" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T2</text>
+<text x="114.0" y="538.6" font-size="10" text-anchor="middle" fill="#444">820×400</text>
+<rect x="195.6" y="34.0" width="320.0" height="160.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="355.6" y="113.0" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T1</text>
+<text x="355.6" y="125.0" font-size="10" text-anchor="middle" fill="#444">800×400</text>
+<rect x="517.2" y="34.0" width="308.0" height="160.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="671.2" y="113.0" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T3</text>
+<text x="671.2" y="125.0" font-size="10" text-anchor="middle" fill="#444">770×400</text>
+<rect x="195.6" y="195.6" width="148.0" height="308.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="269.6" y="348.6" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T4</text>
+<text x="269.6" y="360.6" font-size="10" text-anchor="middle" fill="#444">770×370</text>
+<rect x="195.6" y="505.2" width="144.0" height="308.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="267.6" y="658.2" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T6</text>
+<text x="267.6" y="670.2" font-size="10" text-anchor="middle" fill="#444">770×360</text>
+<rect x="345.2" y="195.6" width="200.0" height="160.0" fill="#f6d3bf" stroke="#2b2622" stroke-width="0.8"/>
+<text x="445.2" y="274.6" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">N1</text>
+<text x="445.2" y="286.6" font-size="10" text-anchor="middle" fill="#444">500×400</text>
+<rect x="34.0" y="693.2" width="160.0" height="192.0" fill="#f6d3bf" stroke="#2b2622" stroke-width="0.8"/>
+<text x="114.0" y="788.2" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">N2</text>
+<text x="114.0" y="800.2" font-size="10" text-anchor="middle" fill="#444">480×400</text>
+<rect x="546.8" y="195.6" width="192.0" height="160.0" fill="#f6d3bf" stroke="#2b2622" stroke-width="0.8"/>
+<text x="642.8" y="274.6" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">N2</text>
+<text x="642.8" y="286.6" font-size="10" text-anchor="middle" fill="#444">480×400</text>
+<rect x="740.4" y="195.6" width="188.0" height="160.0" fill="#f6d3bf" stroke="#2b2622" stroke-width="0.8"/>
+<text x="834.4" y="274.6" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">N3</text>
+<text x="834.4" y="286.6" font-size="10" text-anchor="middle" fill="#444">470×400</text>
+<rect x="345.2" y="357.2" width="160.0" height="188.0" fill="#f6d3bf" stroke="#2b2622" stroke-width="0.8"/>
+<text x="425.2" y="450.2" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">N4</text>
+<text x="425.2" y="462.2" font-size="10" text-anchor="middle" fill="#444">470×400</text>
+<rect x="826.8" y="34.0" width="166.4" height="152.8" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="910.0" y="109.4" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T8</text>
+<text x="910.0" y="121.4" font-size="10" text-anchor="middle" fill="#444">416×382</text>
+<rect x="345.2" y="546.8" width="152.8" height="166.4" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="421.6" y="629.0" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T8</text>
+<text x="421.6" y="641.0" font-size="10" text-anchor="middle" fill="#444">416×382</text>
+<rect x="506.8" y="357.2" width="186.4" height="102.4" fill="#f6d3bf" stroke="#2b2622" stroke-width="0.8"/>
+<text x="600.0" y="407.4" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">N5</text>
+<text x="600.0" y="419.4" font-size="10" text-anchor="middle" fill="#444">466×256</text>
+<rect x="694.8" y="357.2" width="306.4" height="62.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="848.0" y="387.2" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T7</text>
+<text x="848.0" y="399.2" font-size="10" text-anchor="middle" fill="#444">766×155</text>
+<rect x="506.8" y="461.2" width="62.0" height="306.4" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="537.8" y="613.4" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T7</text>
+<text x="537.8" y="625.4" font-size="10" text-anchor="middle" fill="#444">766×155</text>
+<rect x="570.4" y="461.2" width="44.0" height="285.6" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="592.4" y="603.0" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622" transform="rotate(-90 592.4 604.0)">T10</text>
+<text x="592.4" y="615.0" font-size="10" text-anchor="middle" fill="#444" transform="rotate(-90 592.4 604.0)">714×110</text>
+<rect x="616.0" y="461.2" width="285.6" height="44.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="758.8" y="482.2" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T10</text>
+<text x="758.8" y="494.2" font-size="10" text-anchor="middle" fill="#444">714×110</text>
+<rect x="616.0" y="506.8" width="44.0" height="285.6" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="638.0" y="648.6" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622" transform="rotate(-90 638.0 649.6)">T10</text>
+<text x="638.0" y="660.6" font-size="10" text-anchor="middle" fill="#444" transform="rotate(-90 638.0 649.6)">714×110</text>
+<rect x="661.6" y="506.8" width="285.6" height="44.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="804.4" y="527.8" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T10</text>
+<text x="804.4" y="539.8" font-size="10" text-anchor="middle" fill="#444">714×110</text>
+<rect x="661.6" y="552.4" width="32.0" height="308.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="677.6" y="705.4" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622" transform="rotate(-90 677.6 706.4)">T5</text>
+<text x="677.6" y="717.4" font-size="10" text-anchor="middle" fill="#444" transform="rotate(-90 677.6 706.4)">770×80</text>
+<rect x="695.2" y="552.4" width="32.0" height="308.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="711.2" y="705.4" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622" transform="rotate(-90 711.2 706.4)">T5</text>
+<text x="711.2" y="717.4" font-size="10" text-anchor="middle" fill="#444" transform="rotate(-90 711.2 706.4)">770×80</text>
+<rect x="195.6" y="814.8" width="140.0" height="44.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="265.6" y="835.8" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T9</text>
+<text x="265.6" y="847.8" font-size="10" text-anchor="middle" fill="#444">350×110</text>
+<rect x="930.0" y="195.6" width="44.0" height="140.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="952.0" y="264.6" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622" transform="rotate(-90 952.0 265.6)">T9</text>
+<text x="952.0" y="276.6" font-size="10" text-anchor="middle" fill="#444" transform="rotate(-90 952.0 265.6)">350×110</text>
+<rect x="345.2" y="714.8" width="140.0" height="44.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="415.2" y="735.8" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T9</text>
+<text x="415.2" y="747.8" font-size="10" text-anchor="middle" fill="#444">350×110</text>
+<rect x="345.2" y="760.4" width="140.0" height="44.0" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="415.2" y="781.4" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">T9</text>
+<text x="415.2" y="793.4" font-size="10" text-anchor="middle" fill="#444">350×110</text>
+</svg></div>
+<div class="grid2" style="margin-top:8px">
+<div class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1036 792" font-family="Liberation Sans, Arial, sans-serif">
+<rect x="30" y="30" width="976.0" height="732.0" fill="#efe8dd" stroke="#2b2622" stroke-width="2"/>
+<text x="30" y="20" font-size="14" font-weight="700" fill="#2b2622">HDF 3 mm · 2440 × 1830 · 1 lámina</text>
+<text x="518.0" y="782.0" font-size="11" text-anchor="middle" fill="#666">2440 mm</text>
+<text x="20" y="396.0" font-size="11" text-anchor="middle" fill="#666" transform="rotate(-90 20 396.0)">1830 mm</text>
+<rect x="34.0" y="34.0" width="320.0" height="328.0" fill="#e6dcc8" stroke="#2b2622" stroke-width="0.8"/>
+<text x="194.0" y="197.0" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">TH1</text>
+<text x="194.0" y="209.0" font-size="10" text-anchor="middle" fill="#444">820×800</text>
+<rect x="34.0" y="363.6" width="297.6" height="140.0" fill="#e6dcc8" stroke="#2b2622" stroke-width="0.8"/>
+<text x="182.8" y="432.6" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">TH2</text>
+<text x="182.8" y="444.6" font-size="10" text-anchor="middle" fill="#444">744×350</text>
+<rect x="34.0" y="505.2" width="297.6" height="140.0" fill="#e6dcc8" stroke="#2b2622" stroke-width="0.8"/>
+<text x="182.8" y="574.2" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">TH2</text>
+<text x="182.8" y="586.2" font-size="10" text-anchor="middle" fill="#444">744×350</text>
+<rect x="355.6" y="34.0" width="200.0" height="192.0" fill="#f0e1d0" stroke="#2b2622" stroke-width="0.8"/>
+<text x="455.6" y="129.0" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2622">NH1</text>
+<text x="455.6" y="141.0" font-size="10" text-anchor="middle" fill="#444">500×480</text>
+</svg></div>
+<div class="box small">Cortes tipo guillotina, como los de la seccionadora. Pide que corten <b>las dos listas en la misma lámina</b>,
+que marquen cada pieza con su ID (T1…T10, N1…N5, TH, NH) y que te entreguen los retazos.<br><br>
+Los frentes y puertas son <b>embutidos</b>: van <b>dentro</b> del mueble, con 2 mm de luz. Por eso sus medidas son exactas; revisa que
+la tienda las corte bien antes de enchapar.</div>
+</div>
+</section>
+
+<section class="page">
+<h2><span class="n">4</span>Lista de piezas y cantos</h2>
+<h3>Cómoda Turín · melamina RH 15 mm</h3><table><tr><th>ID</th><th>Pieza</th><th>Cant.</th><th>Medida (mm)</th><th>Canto en los bordes de (mm)</th></tr><tr><td class='id'>T1</td><td>Tapa</td><td class='n'>1</td><td class='n'>800 × 400</td><td class='c'>800 + 800 + 400 + 400</td></tr><tr><td class='id'>T2</td><td>Costado</td><td class='n'>2</td><td class='n'>820 × 400</td><td class='c'>820 + 400</td></tr><tr><td class='id'>T3</td><td>Piso</td><td class='n'>1</td><td class='n'>770 × 400</td><td class='c'>770</td></tr><tr><td class='id'>T4</td><td>Entrepaño fijo (sobre las puertas)</td><td class='n'>1</td><td class='n'>770 × 370</td><td class='c'>770</td></tr><tr><td class='id'>T5</td><td>Travesaño superior acostado</td><td class='n'>2</td><td class='n'>770 × 80</td><td class='c'>—</td></tr><tr><td class='id'>T6</td><td>Repisa interior regulable</td><td class='n'>1</td><td class='n'>770 × 360</td><td class='c'>770</td></tr><tr><td class='id'>T7</td><td>Frente de cajón (embutido)</td><td class='n'>2</td><td class='n'>766 × 155</td><td class='c'>766 + 766 + 155 + 155</td></tr><tr><td class='id'>T8</td><td>Puerta (embutida)</td><td class='n'>2</td><td class='n'>416 × 382</td><td class='c'>416 + 416 + 382 + 382</td></tr><tr><td class='id'>T9</td><td>Costado de cajón</td><td class='n'>4</td><td class='n'>350 × 110</td><td class='c'>350</td></tr><tr><td class='id'>T10</td><td>Frente/fondo interno de cajón</td><td class='n'>4</td><td class='n'>714 × 110</td><td class='c'>714</td></tr></table>
+<h3>Nochero Sleep · melamina RH 15 mm</h3><table><tr><th>ID</th><th>Pieza</th><th>Cant.</th><th>Medida (mm)</th><th>Canto en los bordes de (mm)</th></tr><tr><td class='id'>N1</td><td>Tapa</td><td class='n'>1</td><td class='n'>500 × 400</td><td class='c'>500 + 500 + 400 + 400</td></tr><tr><td class='id'>N2</td><td>Costado</td><td class='n'>2</td><td class='n'>480 × 400</td><td class='c'>480 + 400</td></tr><tr><td class='id'>N3</td><td>Piso</td><td class='n'>1</td><td class='n'>470 × 400</td><td class='c'>470</td></tr><tr><td class='id'>N4</td><td>Repisa (base del nicho)</td><td class='n'>1</td><td class='n'>470 × 400</td><td class='c'>470</td></tr><tr><td class='id'>N5</td><td>Puerta (embutida)</td><td class='n'>1</td><td class='n'>466 × 256</td><td class='c'>466 + 466 + 256 + 256</td></tr></table>
+<h3>HDF 3 mm</h3>
+<table><tr><th>ID</th><th>Pieza</th><th>Cant.</th><th>Medida (mm)</th></tr>
+<tr><td class='id'>TH1</td><td>Cómoda · fondo</td><td class='n'>1</td><td class='n'>820 × 800</td></tr>
+<tr><td class='id'>TH2</td><td>Cómoda · base de cajón</td><td class='n'>2</td><td class='n'>744 × 350</td></tr>
+<tr><td class='id'>NH1</td><td>Nochero · fondo</td><td class='n'>1</td><td class='n'>500 × 480</td></tr></table>
+<p class="small">Canto: cómoda ≈ 18.3 m · nochero ≈ 5.9 m (pide +10 %).</p>
+<div class="grid2"><img src="../renders/turin-front.png" style="width:100%;border-radius:8px"><img src="../renders/sleep-front.png" style="width:100%;border-radius:8px"></div>
+</section>
+
+<section class="page">
+<h2><span class="n">5</span>Uniones: cómo se fija cada pieza</h2>
+<div class="box small"><b>Sistema recomendado: tornillo de ensamble 6 × 2" directo.</b> Atraviesa la pieza de 15 mm y entra 35 mm en el canto
+de la otra. Siempre con <b>guía de 3 mm</b> y avellanado, al centro del espesor (7,5 mm de la línea de unión) y a 40 mm de las esquinas.
+Las cabezas visibles en los costados se cubren con <b>tapatornillos adhesivos</b>.<br>
+<b>Alternativa como el original (RTA):</b> los muebles armables usan <b>minifix</b> (excéntrica + perno) y <b>tarugos de 8 × 30 mm</b>; la unión
+queda invisible y se puede desarmar, pero hay que perforar con la plantilla del minifix. Si la usas, cambia cada tornillo de carcasa por 1 minifix + 1 tarugo.</div>
+<h3>Cómoda Turín</h3>
+<table><tr><th>Unión</th><th>Piezas</th><th>Herraje</th><th>Cant.</th><th>Cómo</th></tr><tr><td>Costado ↔ piso</td><td class='id'>T2 + T3</td><td>Tornillo 6 × 2&quot;</td><td class='n'>3 por lado</td><td class='c'>Piso al ras del borde inferior: línea a 7 mm</td></tr><tr><td>Costado ↔ entrepaño</td><td class='id'>T2 + T4</td><td>Tornillo 6 × 2&quot;</td><td class='n'>3 por lado</td><td class='c'>Línea a 442 mm del borde inferior; entrepaño 30 mm hacia atrás</td></tr><tr><td>Costado ↔ travesaños</td><td class='id'>T2 + T5</td><td>Tornillo 6 × 2&quot;</td><td class='n'>2 por extremo (8)</td><td class='c'>Acostados arriba, línea a 812 mm; delantero 20 mm atrás del frente</td></tr><tr><td>Tapa ↔ travesaños</td><td class='id'>T1 + T5</td><td>Tornillo 6 × 1&quot;</td><td class='n'>4 por travesaño (8)</td><td class='c'>Desde abajo: no se ven</td></tr><tr><td>Fondo</td><td class='id'>TH1</td><td>Puntilla 3/4&quot;</td><td class='n'>cada 10–15 cm</td><td class='c'>Escuadra el mueble</td></tr><tr><td>Patas</td><td class='id'>piso T3</td><td>Pata + su tornillo</td><td class='n'>4</td><td class='c'>A 40 mm de cada esquina</td></tr><tr><td>Caja de cajón</td><td class='id'>T9 + T10</td><td>Tornillo 6 × 2&quot;</td><td class='n'>8 por caja (16)</td><td class='c'>2 por esquina desde el costado</td></tr><tr><td>Base de cajón</td><td class='id'>TH2</td><td>Puntilla 3/4&quot;</td><td class='n'>cada 10 cm</td><td class='c'>Por debajo</td></tr><tr><td>Rieles</td><td class='id'>costados + cajas</td><td>Tornillos del riel</td><td class='n'>incluidos</td><td class='c'>A 17 mm del frente (detrás del frente embutido)</td></tr><tr><td>Frente ↔ caja</td><td class='id'>T7 + T10</td><td>Tornillo 6 × 1&quot;</td><td class='n'>4 por frente (8)</td><td class='c'>Desde dentro, con 2 mm de luz alrededor</td></tr><tr><td>Puertas</td><td class='id'>T8 + T2</td><td>Bisagra codo cierre lento</td><td class='n'>2 pares</td><td class='c'>Cada puerta en su costado exterior</td></tr><tr><td>Repisa interior</td><td class='id'>T6</td><td>Pin 5 mm</td><td class='n'>4</td><td class='c'>Altura regulable</td></tr><tr><td>Anclaje a la pared</td><td class='id'>T5 trasero</td><td>Cantonera + taco 6 mm</td><td class='n'>2</td><td class='c'>Obligatorio con niños</td></tr></table>
+<h3>Nochero Sleep</h3>
+<table><tr><th>Unión</th><th>Piezas</th><th>Herraje</th><th>Cant.</th><th>Cómo</th></tr><tr><td>Costado ↔ piso</td><td class='id'>N2 + N3</td><td>Tornillo 6 × 2&quot;</td><td class='n'>3 por lado</td><td class='c'>Línea a 7 mm del borde inferior</td></tr><tr><td>Costado ↔ repisa</td><td class='id'>N2 + N4</td><td>Tornillo 6 × 2&quot;</td><td class='n'>3 por lado</td><td class='c'>Línea a 282 mm del borde inferior</td></tr><tr><td>Tapa ↔ carcasa</td><td class='id'>N1</td><td>Cantonera 19 × 12</td><td class='n'>4</td><td class='c'>Dentro del nicho (2 adelante, 2 atrás)</td></tr><tr><td>Fondo</td><td class='id'>NH1</td><td>Puntilla 3/4&quot;</td><td class='n'>cada 10 cm</td><td class='c'>Rigidiza el mueble (no lleva travesaño)</td></tr><tr><td>Patas</td><td class='id'>piso N3</td><td>Pata + su tornillo</td><td class='n'>4</td><td class='c'>A 40 mm de cada esquina</td></tr><tr><td>Puerta ↔ costado derecho</td><td class='id'>N5 + N2</td><td>Bisagra codo eco</td><td class='n'>2</td><td class='c'>Sin cierre lento (por el push)</td></tr><tr><td>Apertura</td><td class='id'>N5 + N2 izq.</td><td>Push to open con imán</td><td class='n'>1</td><td class='c'>Costado izquierdo, por dentro</td></tr></table>
+</section>
+
+<section class="page">
+<h2><span class="n">6</span>Medidas de perforación</h2>
+<div class="grid2">
+<div class="fig r1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540.0 541.0" font-family="Liberation Sans, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 2 L10 5 L0 8 z" fill="#c0392b"/></marker></defs>
+<text x="90" y="18" font-size="13" font-weight="700" fill="#2b2622">Cómoda Turín · costados (cara interior)</text>
+<rect x="90" y="40" width="220.00000000000003" height="451.00000000000006" fill="#f4f1ec" stroke="#2b2622" stroke-width="1.5"/>
+<text x="314.0" y="505.00000000000006" font-size="10" fill="#777">FRENTE →</text><text x="86" y="505.00000000000006" font-size="10" fill="#777" text-anchor="end">← ATRÁS</text>
+<rect x="90.0" y="482.75000000000006" width="220.00000000000003" height="8.25" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="200.0" y="479.75000000000006" font-size="10" text-anchor="middle" fill="#2b2622">T3 piso</text>
+<circle cx="112.0" cy="486.87500000000006" r="2.6" fill="#2b2622"/>
+<circle cx="200.0" cy="486.87500000000006" r="2.6" fill="#2b2622"/>
+<circle cx="288.0" cy="486.87500000000006" r="2.6" fill="#2b2622"/>
+<rect x="90.0" y="243.50000000000003" width="203.50000000000003" height="8.25" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="191.75" y="240.50000000000003" font-size="10" text-anchor="middle" fill="#2b2622">T4 entrepaño</text>
+<circle cx="112.0" cy="247.62500000000003" r="2.6" fill="#2b2622"/>
+<circle cx="200.0" cy="247.62500000000003" r="2.6" fill="#2b2622"/>
+<circle cx="288.0" cy="247.62500000000003" r="2.6" fill="#2b2622"/>
+<rect x="90.0" y="40.0" width="44.0" height="8.25" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="112.0" y="37.0" font-size="10" text-anchor="middle" fill="#2b2622">T5</text>
+<circle cx="112.0" cy="44.125" r="2.6" fill="#2b2622"/>
+<rect x="255.0" y="40.0" width="44.0" height="8.25" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="277.0" y="37.0" font-size="10" text-anchor="middle" fill="#2b2622">T5</text>
+<circle cx="277.0" cy="44.125" r="2.6" fill="#2b2622"/>
+<rect x="108.15" y="80.10000000000002" width="192.50000000000003" height="10" rx="2" fill="#b8bcc2" stroke="#666"/>
+<line x1="108.15" y1="85.10000000000002" x2="300.65" y2="85.10000000000002" stroke="#2f7d78" stroke-dasharray="4 3"/>
+<text x="320.0" y="89.10000000000002" font-size="11" fill="#2f7d78">Riel cajón 1: centro a 738 mm</text>
+<rect x="108.15" y="181.85000000000002" width="192.50000000000003" height="10" rx="2" fill="#b8bcc2" stroke="#666"/>
+<line x1="108.15" y1="186.85000000000002" x2="300.65" y2="186.85000000000002" stroke="#2f7d78" stroke-dasharray="4 3"/>
+<text x="320.0" y="190.85000000000002" font-size="11" fill="#2f7d78">Riel cajón 2: centro a 553 mm</text>
+<rect x="275.4" y="417.65000000000003" width="12" height="18" fill="#e6b089" stroke="#8a4b22"/>
+<text x="271.4" y="430.65000000000003" font-size="10" text-anchor="end" fill="#8a4b22">bisagra</text>
+<rect x="275.4" y="298.85" width="12" height="18" fill="#e6b089" stroke="#8a4b22"/>
+<text x="271.4" y="311.85" font-size="10" text-anchor="end" fill="#8a4b22">bisagra</text>
+<line x1="60" y1="40" x2="60" y2="491.00000000000006" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="54" y="269.5" font-size="11" fill="#c0392b" text-anchor="end">820</text>
+<line x1="90" y1="523.0" x2="310.0" y2="523.0" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="200.0" y="518.0" font-size="11" fill="#c0392b" text-anchor="middle">400 mm</text>
+<text x="320.0" y="441.00000000000006" font-size="10" fill="#555">• Alturas desde el borde inferior</text>
+<text x="320.0" y="456.00000000000006" font-size="10" fill="#555">  del costado (sin patas)</text>
+<text x="320.0" y="471.00000000000006" font-size="10" fill="#555">• Rieles 35 cm a 17 mm del frente</text>
+<text x="320.0" y="486.00000000000006" font-size="10" fill="#555">• Bisagras (naranja): base a 52 mm</text>
+<text x="320.0" y="501.00000000000006" font-size="10" fill="#555">  del frente, alturas 117 y 333</text>
+<text x="320.0" y="516.0" font-size="10" fill="#555">• ● = tornillo 6×2"</text>
+</svg></div>
+<div class="fig r1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540.0 354.0" font-family="Liberation Sans, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 2 L10 5 L0 8 z" fill="#c0392b"/></marker></defs>
+<text x="90" y="18" font-size="13" font-weight="700" fill="#2b2622">Nochero Sleep · costados (cara interior)</text>
+<rect x="90" y="40" width="220.00000000000003" height="264.0" fill="#f4f1ec" stroke="#2b2622" stroke-width="1.5"/>
+<text x="314.0" y="318.0" font-size="10" fill="#777">FRENTE →</text><text x="86" y="318.0" font-size="10" fill="#777" text-anchor="end">← ATRÁS</text>
+<rect x="90.0" y="295.75" width="220.00000000000003" height="8.25" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="200.0" y="292.75" font-size="10" text-anchor="middle" fill="#2b2622">N3 piso</text>
+<circle cx="112.0" cy="299.875" r="2.6" fill="#2b2622"/>
+<circle cx="200.0" cy="299.875" r="2.6" fill="#2b2622"/>
+<circle cx="288.0" cy="299.875" r="2.6" fill="#2b2622"/>
+<rect x="90.0" y="144.5" width="220.00000000000003" height="8.25" fill="#cfe3e1" stroke="#2b2622" stroke-width="0.8"/>
+<text x="200.0" y="141.5" font-size="10" text-anchor="middle" fill="#2b2622">N4 repisa</text>
+<circle cx="112.0" cy="148.625" r="2.6" fill="#2b2622"/>
+<circle cx="200.0" cy="148.625" r="2.6" fill="#2b2622"/>
+<circle cx="288.0" cy="148.625" r="2.6" fill="#2b2622"/>
+<rect x="275.4" y="252.64999999999998" width="12" height="18" fill="#e6b089" stroke="#8a4b22"/>
+<text x="271.4" y="265.65" font-size="10" text-anchor="end" fill="#8a4b22">bisagra</text>
+<rect x="275.4" y="177.85" width="12" height="18" fill="#e6b089" stroke="#8a4b22"/>
+<text x="271.4" y="190.85" font-size="10" text-anchor="end" fill="#8a4b22">bisagra</text>
+<line x1="60" y1="40" x2="60" y2="304.0" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="54" y="176.0" font-size="11" fill="#c0392b" text-anchor="end">480</text>
+<line x1="90" y1="336.0" x2="310.0" y2="336.0" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="200.0" y="331.0" font-size="11" fill="#c0392b" text-anchor="middle">400 mm</text>
+<text x="320.0" y="254.0" font-size="10" fill="#555">• Alturas desde el borde inferior</text>
+<text x="320.0" y="269.0" font-size="10" fill="#555">• Bisagras solo en el costado</text>
+<text x="320.0" y="284.0" font-size="10" fill="#555">  DERECHO: base a 52 mm del</text>
+<text x="320.0" y="299.0" font-size="10" fill="#555">  frente, alturas 77 y 213 mm</text>
+<text x="320.0" y="314.0" font-size="10" fill="#555">• Push-to-open: costado izquierdo,</text>
+<text x="320.0" y="329.0" font-size="10" fill="#555">  por dentro, a 150 mm</text>
+<text x="320.0" y="344.0" font-size="10" fill="#555">• ● = tornillo 6×2"</text>
+</svg></div>
+</div>
+<div class="grid2">
+<div class="fig r2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.6 414.8" font-family="Liberation Sans, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 2 L10 5 L0 8 z" fill="#c0392b"/></marker></defs>
+<text x="60" y="18" font-size="13" font-weight="700" fill="#2b2622">T8 Puerta embutida ×2 (derecha; izquierda en espejo)</text>
+<rect x="60" y="36" width="305.6" height="332.8" fill="#f4f1ec" stroke="#2b2622" stroke-width="1.5"/>
+<circle cx="348.0" cy="288.8" r="14.0" fill="none" stroke="#2f7d78" stroke-width="2"/>
+<text x="348.0" y="270.8" font-size="10" text-anchor="middle" fill="#2f7d78">cazoleta</text>
+<circle cx="348.0" cy="116.0" r="14.0" fill="none" stroke="#2f7d78" stroke-width="2"/>
+<text x="348.0" y="98.0" font-size="10" text-anchor="middle" fill="#2f7d78">cazoleta</text>
+<line x1="60" y1="396.8" x2="365.6" y2="396.8" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="212.8" y="391.8" font-size="11" fill="#c0392b" text-anchor="middle">382</text>
+<line x1="34" y1="36" x2="34" y2="368.8" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="28" y="206.4" font-size="11" fill="#c0392b" text-anchor="end">416</text>
+<text x="377.6" y="50" font-size="10" fill="#555">Cazoleta Ø35, 12 mm de</text>
+<text x="377.6" y="65" font-size="10" fill="#555">profundidad, centro a 22 mm</text>
+<text x="377.6" y="80" font-size="10" fill="#555">del borde de la bisagra,</text>
+<text x="377.6" y="95" font-size="10" fill="#555">a 100 mm de arriba y abajo.</text>
+<text x="377.6" y="110" font-size="10" fill="#555">Bisagra CODO (puerta</text>
+<text x="377.6" y="125" font-size="10" fill="#555">embutida) cierre lento.</text>
+<text x="377.6" y="140" font-size="10" fill="#555">Se abre tomando el borde</text>
+<text x="377.6" y="155" font-size="10" fill="#555">superior (ranura de 45 mm).</text>
+</svg></div>
+<div><div class="fig r3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 689.5999999999999 175.0" font-family="Liberation Sans, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 2 L10 5 L0 8 z" fill="#c0392b"/></marker></defs>
+<text x="60" y="18" font-size="13" font-weight="700" fill="#2b2622">T7 Frente de cajón embutido ×2</text>
+<rect x="60" y="36" width="459.59999999999997" height="93.0" fill="#f4f1ec" stroke="#2b2622" stroke-width="1.5"/>
+<circle cx="289.79999999999995" cy="52.8" r="6.0" fill="none" stroke="#2f7d78" stroke-width="2"/>
+<text x="289.79999999999995" y="42.8" font-size="10" text-anchor="middle" fill="#2f7d78">cerradura (opcional, solo el de arriba)</text>
+<line x1="60" y1="157.0" x2="519.5999999999999" y2="157.0" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="289.79999999999995" y="152.0" font-size="11" fill="#c0392b" text-anchor="middle">766</text>
+<line x1="34" y1="36" x2="34" y2="129.0" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="28" y="86.5" font-size="11" fill="#c0392b" text-anchor="end">155</text>
+<text x="531.5999999999999" y="50" font-size="10" fill="#555">Sin manija: se abre por la</text>
+<text x="531.5999999999999" y="65" font-size="10" fill="#555">ranura de 30 mm entre frentes.</text>
+<text x="531.5999999999999" y="80" font-size="10" fill="#555">Luz de 2 mm con los costados.</text>
+<text x="531.5999999999999" y="95" font-size="10" fill="#555">Fija con 4 tornillos 6×1"</text>
+<text x="531.5999999999999" y="110" font-size="10" fill="#555">desde dentro del cajón.</text>
+</svg></div><div class="fig r3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.59999999999997 235.6" font-family="Liberation Sans, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 2 L10 5 L0 8 z" fill="#c0392b"/></marker></defs>
+<text x="60" y="18" font-size="13" font-weight="700" fill="#2b2622">N5 Puerta embutida · nochero</text>
+<rect x="60" y="36" width="279.59999999999997" height="153.6" fill="#f4f1ec" stroke="#2b2622" stroke-width="1.5"/>
+<circle cx="326.4" cy="153.6" r="10.5" fill="none" stroke="#2f7d78" stroke-width="2"/>
+<text x="326.4" y="139.1" font-size="10" text-anchor="middle" fill="#2f7d78">cazoleta</text>
+<circle cx="326.4" cy="72.0" r="10.5" fill="none" stroke="#2f7d78" stroke-width="2"/>
+<text x="326.4" y="57.5" font-size="10" text-anchor="middle" fill="#2f7d78">cazoleta</text>
+<circle cx="78.0" cy="99.6" r="3.5999999999999996" fill="none" stroke="#2f7d78" stroke-width="2"/>
+<text x="78.0" y="92.0" font-size="10" text-anchor="middle" fill="#2f7d78">imán push</text>
+<line x1="60" y1="217.6" x2="339.59999999999997" y2="217.6" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="199.79999999999998" y="212.6" font-size="11" fill="#c0392b" text-anchor="middle">466</text>
+<line x1="34" y1="36" x2="34" y2="189.6" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="28" y="116.8" font-size="11" fill="#c0392b" text-anchor="end">256</text>
+<text x="351.59999999999997" y="50" font-size="10" fill="#555">Cazoletas a 22 mm del borde</text>
+<text x="351.59999999999997" y="65" font-size="10" fill="#555">derecho y a 60 mm de arriba</text>
+<text x="351.59999999999997" y="80" font-size="10" fill="#555">y de abajo. Bisagra CODO</text>
+<text x="351.59999999999997" y="95" font-size="10" fill="#555">(sin cierre lento, para que</text>
+<text x="351.59999999999997" y="110" font-size="10" fill="#555">funcione el push-to-open).</text>
+<text x="351.59999999999997" y="125" font-size="10" fill="#555">Placa del push en la puerta,</text>
+<text x="351.59999999999997" y="140" font-size="10" fill="#555">a 30 mm del borde izquierdo.</text>
+</svg></div></div>
+</div>
+<div class="fig r3" style="max-width:60%"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 676.4 294.0" font-family="Liberation Sans, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 2 L10 5 L0 8 z" fill="#c0392b"/></marker></defs>
+<text x="40" y="18" font-size="13" font-weight="700" fill="#2b2622">Caja de cajón · Turín (vista superior)</text>
+<rect x="40" y="34" width="9.0" height="210.0" fill="#cfe3e1" stroke="#2b2622"/>
+<rect x="477.4" y="34" width="9.0" height="210.0" fill="#cfe3e1" stroke="#2b2622"/>
+<rect x="49.0" y="34" width="428.4" height="9.0" fill="#f6d3bf" stroke="#2b2622"/>
+<rect x="49.0" y="235.0" width="428.4" height="9.0" fill="#f6d3bf" stroke="#2b2622"/>
+<text x="263.2" y="139.0" font-size="11" text-anchor="middle" fill="#555">base HDF por debajo</text>
+<text x="263.2" y="258.0" font-size="10" text-anchor="middle" fill="#777">FRENTE</text>
+<line x1="40" y1="280.0" x2="486.4" y2="280.0" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="263.2" y="275.0" font-size="11" fill="#c0392b" text-anchor="middle">744 mm exterior</text>
+<text x="500.4" y="46" font-size="10" fill="#555">Costados T9 350×110 (verde) por fuera</text>
+<text x="500.4" y="61" font-size="10" fill="#555">Frente/fondo T10 714×110 (naranja) por dentro</text>
+<text x="500.4" y="76" font-size="10" fill="#555">2 tornillos 6×2" por esquina</text>
+<text x="500.4" y="91" font-size="10" fill="#555">Verifica escuadra: diagonales</text>
+<text x="500.4" y="106" font-size="10" fill="#555">iguales antes de clavar la base.</text>
+<text x="500.4" y="121" font-size="10" fill="#555">Riel centrado en el costado</text>
+<text x="500.4" y="136" font-size="10" fill="#555">(a 55 mm del borde inferior).</text>
+</svg></div>
+</section>
+
+<section class="page">
+<h2><span class="n">7</span>Armado de la cómoda Turín</h2>
+<div class='paso'><div class='pimg'><img src='../pasos/st-turin-1.png'><div class='pn'>1</div></div><div class='ptxt'><h3>Arma las 2 cajas de cajón</h3><div class='pz'>Piezas: T9 ×4 · T10 ×4 · TH2 ×2</div><ol><li>T10 (714) entre dos T9 (350), canto hacia arriba; 2 tornillos 6 × 2" por esquina.</li><li>Diagonales iguales → clava la base TH2 por debajo.</li><li>Medida final: 744 × 350 × 110 mm.</li></ol></div></div>
+<div class='paso'><div class='pimg'><img src='../pasos/st-turin-2.png'><div class='pn'>2</div></div><div class='ptxt'><h3>Arma la carcasa</h3><div class='pz'>Piezas: T2 ×2 · T3 · T4 · T5 ×2</div><ol><li>Piso T3 al ras del borde inferior de los costados (3 tornillos por lado).</li><li>Entrepaño T4 con su cara de arriba a 450 mm del borde inferior, <b>30 mm hacia atrás</b> del frente (deja la ranura para abrir las puertas).</li><li>Travesaños T5 acostados arriba: el delantero 20 mm hacia atrás (queda detrás del cajón embutido) y el trasero al ras de atrás.</li></ol></div></div>
+<div class='paso'><div class='pimg'><img src='../pasos/st-turin-3.png'><div class='pn'>3</div></div><div class='ptxt'><h3>Fondo (vista de atrás)</h3><div class='pz'>Piezas: TH1</div><ol><li>Boca abajo, escuadra por diagonales y clava TH1 (820 × 800) cada 10–15 cm.</li></ol><div class='tip'>⚠ Si el fondo queda torcido, los frentes embutidos no cierran parejo.</div></div></div>
+<div class='paso'><div class='pimg'><img src='../pasos/st-turin-4.png'><div class='pn'>4</div></div><div class='ptxt'><h3>Patas y tapa</h3><div class='pz'>Piezas: T1 · 4 patas</div><ol><li>Atornilla las 4 patas bajo el piso, a 40 mm de las esquinas.</li><li>De pie: tapa T1 a ras de costados, frente y atrás; fíjala desde abajo con tornillos 6 × 1" a través de los travesaños.</li></ol></div></div>
+</section>
+
+<section class="page">
+<div class='paso'><div class='pimg'><img src='../pasos/st-turin-5.png'><div class='pn'>5</div></div><div class='ptxt'><h3>Rieles y cajones</h3><div class='pz'>Piezas: 2 pares rieles 35 cm</div><ol><li>Líneas de centro en ambos costados a <b>738 y 553 mm</b> del borde inferior del costado.</li><li>Riel a <b>17 mm del borde frontal</b> (el frente embutido ocupa esos 15 mm + 2 de luz).</li><li>En la caja: riel centrado (55 mm del borde inferior), a ras del frente de la caja.</li></ol></div></div>
+<div class='paso'><div class='pimg'><img src='../pasos/st-turin-6.png'><div class='pn'>6</div></div><div class='ptxt'><h3>Frentes, puertas, repisa y anclaje</h3><div class='pz'>Piezas: T7 ×2 · T8 ×2 · T6</div><ol><li>Frentes T7: con los cajones cerrados, ubícalos con 2 mm de luz a los lados (separadores), doble faz, abre y fija con 4 tornillos 6 × 1".</li><li>Cerradura (opcional) en el frente de arriba: centrada, a 28 mm del borde superior.</li><li>Puertas T8: cazoletas Ø35 a 22 mm del borde de la bisagra; bases en cada costado a 52 mm del frente (alturas 117 y 333 mm). Ajusta hasta tener 2 mm de luz.</li><li>Repisa T6 sobre 4 pines. <b>Ancla la cómoda a la pared</b> con 2 cantoneras al travesaño trasero.</li></ol></div></div>
+<h2 style="margin-top:10px"><span class="n">8</span>Armado del nochero Sleep</h2>
+<div class='paso'><div class='pimg'><img src='../pasos/st-sleep-2.png'><div class='pn'>1</div></div><div class='ptxt'><h3>Carcasa</h3><div class='pz'>Piezas: N2 ×2 · N3 · N4</div><ol><li>Piso N3 al ras del borde inferior (3 tornillos por lado).</li><li>Repisa N4 con su cara de arriba a 290 mm del borde inferior (línea de tornillos a 282 mm).</li></ol></div></div>
+</section>
+
+<section class="page">
+<div class='paso'><div class='pimg'><img src='../pasos/st-sleep-3.png'><div class='pn'>2</div></div><div class='ptxt'><h3>Fondo (vista de atrás)</h3><div class='pz'>Piezas: NH1</div><ol><li>Escuadra por diagonales y clava NH1 (500 × 480) cada 10 cm: es lo que rigidiza el mueble.</li></ol></div></div>
+<div class='paso'><div class='pimg'><img src='../pasos/st-sleep-4.png'><div class='pn'>3</div></div><div class='ptxt'><h3>Patas y tapa</h3><div class='pz'>Piezas: N1 · 4 patas · 4 cantoneras</div><ol><li>4 patas bajo el piso a 40 mm de las esquinas.</li><li>Tapa N1 a ras por todos los lados; fíjala con 4 cantoneras dentro del nicho.</li></ol></div></div>
+<div class='paso'><div class='pimg'><img src='../pasos/st-sleep-6.png'><div class='pn'>4</div></div><div class='ptxt'><h3>Puerta con push</h3><div class='pz'>Piezas: N5 · 2 bisagras codo · push</div><ol><li>Cazoletas a 22 mm del borde derecho y a 60 mm de arriba y abajo.</li><li>Bases en el costado derecho a 52 mm del frente, alturas 77 y 213 mm.</li><li>Push-to-open en el costado izquierdo por dentro, a ≈150 mm; placa metálica en la puerta. Ajusta para que la puerta quede al ras.</li></ol><div class='tip'>⚠ Con push se usan bisagras sin cierre lento: el cierre lento impide que el push empuje la puerta.</div></div></div>
+<div class="grid2" style="margin-top:6px">
+<div><img src="../renders/sleep-color.png" style="width:100%;border-radius:8px"><p class="small">Nochero en color madera clara (tipo Duna).</p></div>
+<div><img src="../renders/set2-color.png" style="width:100%;border-radius:8px"><p class="small">Juego en madera clara.</p></div>
+</div>
+</section>
+
+<section class="page">
+<h2><span class="n">9</span>Herramientas, revisión y cuidados</h2>
+<div class="grid2">
+<div><h3>Herramientas</h3><ul class="check">
+<li>Taladro + broca 3 mm (guía) y avellanador</li><li>Broca 5 mm (pines) y 20 mm si pones cerradura</li>
+<li>Broca Forstner 35 mm (cazoletas) o pedir perforación en tienda</li><li>Puntas PH2, martillo, metro, escuadra</li>
+<li>2 prensas, cinta doble faz, separadores de 2 mm (para frentes embutidos)</li></ul>
+<h3>Revisión</h3><ul class="check">
+<li>Cajones y puertas con luz pareja de 2 mm, sin rozar</li><li>El push abre la puerta del nochero con un toque</li>
+<li>Cómoda anclada a la pared</li><li>Patas firmes (el mueble no cojea)</li><li>Tapatornillos puestos</li></ul></div>
+<div class="box small"><b>Cuidados:</b> la melamina RH resiste la humedad del ambiente, manchas y rayas, pero no el agua directa.
+Las patas dejan el mueble 25 mm arriba del piso: al trapear no se moja el aglomerado.<br><br>
+<b>Frentes embutidos:</b> son más exigentes que los superpuestos. Si el mueble no está a escuadra se nota en la luz. Por eso el fondo va
+clavado con el mueble bien escuadrado.<br><br>
+<b>Fuentes:</b> Homecenter (Cómoda Turín 4 cajones 80×86×40, cód. 628936, $449.900; Nochero Velador Sleep S-52, cód. 677789, $174.900),
+madecentro.com (lámina, rieles, bisagras, push, tornillos, cantoneras). Verifica precios antes de comprar.</div>
+</div>
+<img src="../renders/turin-color.png" style="width:58%;display:block;margin:10px auto;border-radius:8px">
+</section>
+</body></html>

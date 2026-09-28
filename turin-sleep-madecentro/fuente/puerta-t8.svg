@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.6 414.8" font-family="Liberation Sans, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 2 L10 5 L0 8 z" fill="#c0392b"/></marker></defs>
+<text x="60" y="18" font-size="13" font-weight="700" fill="#2b2622">T8 Puerta embutida ×2 (derecha; izquierda en espejo)</text>
+<rect x="60" y="36" width="305.6" height="332.8" fill="#f4f1ec" stroke="#2b2622" stroke-width="1.5"/>
+<circle cx="348.0" cy="288.8" r="14.0" fill="none" stroke="#2f7d78" stroke-width="2"/>
+<text x="348.0" y="270.8" font-size="10" text-anchor="middle" fill="#2f7d78">cazoleta</text>
+<circle cx="348.0" cy="116.0" r="14.0" fill="none" stroke="#2f7d78" stroke-width="2"/>
+<text x="348.0" y="98.0" font-size="10" text-anchor="middle" fill="#2f7d78">cazoleta</text>
+<line x1="60" y1="396.8" x2="365.6" y2="396.8" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="212.8" y="391.8" font-size="11" fill="#c0392b" text-anchor="middle">382</text>
+<line x1="34" y1="36" x2="34" y2="368.8" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="28" y="206.4" font-size="11" fill="#c0392b" text-anchor="end">416</text>
+<text x="377.6" y="50" font-size="10" fill="#555">Cazoleta Ø35, 12 mm de</text>
+<text x="377.6" y="65" font-size="10" fill="#555">profundidad, centro a 22 mm</text>
+<text x="377.6" y="80" font-size="10" fill="#555">del borde de la bisagra,</text>
+<text x="377.6" y="95" font-size="10" fill="#555">a 100 mm de arriba y abajo.</text>
+<text x="377.6" y="110" font-size="10" fill="#555">Bisagra CODO (puerta</text>
+<text x="377.6" y="125" font-size="10" fill="#555">embutida) cierre lento.</text>
+<text x="377.6" y="140" font-size="10" fill="#555">Se abre tomando el borde</text>
+<text x="377.6" y="155" font-size="10" fill="#555">superior (ranura de 45 mm).</text>
+</svg>
