@@ -27,7 +27,7 @@ const scene = new THREE.Scene();
 const pmrem = new THREE.PMREMGenerator(renderer);
 scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
 scene.environmentIntensity = 0.35;
-scene.background = new THREE.Color(VIEW === 'exploded' ? 0xf4f1ec : 0xd9d2c7);
+scene.background = new THREE.Color(VIEW === 'exploded' || VIEW === 'step' ? 0xf4f1ec : 0xd9d2c7);
 
 // ---------- textures ----------
 function canvasTex(w, h, draw, rep = [1, 1]) {
@@ -90,12 +90,13 @@ const PLINTH = VIEW === 'color' ? M.woodH : M.white;
 // ---------- helpers (units: mm → m) ----------
 const mm = v => v / 1000;
 const root = new THREE.Group(); scene.add(root);
+let CUR = 0; // paso de armado de la pieza que se está creando
 function box(x0, x1, y0, y1, z0, z1, mat, parent = root, r = 0.8) {
   const w = mm(x1 - x0), h = mm(y1 - y0), d = mm(z1 - z0);
   const geo = new RoundedBoxGeometry(w, h, d, 2, Math.min(mm(r), w / 2.1, h / 2.1, d / 2.1));
   const m = new THREE.Mesh(geo, mat);
   m.position.set(mm((x0 + x1) / 2), mm((y0 + y1) / 2), mm((z0 + z1) / 2));
-  m.castShadow = m.receiveShadow = true; parent.add(m); return m;
+  m.castShadow = m.receiveShadow = true; m.userData.step = CUR; parent.add(m); return m;
 }
 const starShape = (() => {
   const s = new THREE.Shape(), R = mm(19), r = mm(9);
@@ -111,38 +112,40 @@ function knob(x, y, z, parent = root) {
   const star = new THREE.Mesh(new THREE.ExtrudeGeometry(starShape, { depth: mm(9), bevelEnabled: true, bevelThickness: mm(3), bevelSize: mm(2.5), bevelSegments: 3 }), M.knob);
   star.position.z = mm(14); g.add(star);
   g.children.forEach(c => c.castShadow = true);
-  g.position.set(mm(x), mm(y), mm(z)); parent.add(g); return g;
+  g.userData.step = CUR; g.position.set(mm(x), mm(y), mm(z)); parent.add(g); return g;
 }
 
 // ---------- the chest (x: 0..1050 left→right, y: floor up, z: back 0 → front 480) ----------
 const EX = VIEW === 'exploded';
+const STEP = VIEW === 'step' ? +(P.get('step') || 9) : 99;
 const ex = (v) => EX ? v : 0; // explode offsets
 // Medidas: 900 x 800 x 400 mm; frentes de cajón 590 x 160
 function carcass() {
-  box(0, 900, 785, 800, 0, 400, TOP, root, 2).position.y += mm(ex(240));                   // sobre
-  box(15, 30, 0, 785, 0, 380, SIDE).position.x -= mm(ex(150));                          // costado izq
+  CUR = 4; box(0, 900, 785, 800, 0, 400, TOP, root, 2).position.y += mm(ex(240));                   // sobre
+  CUR = 2; box(15, 30, 0, 785, 0, 380, SIDE).position.x -= mm(ex(150));                          // costado izq
   box(870, 885, 0, 785, 0, 380, SIDE).position.x += mm(ex(150));                        // costado der
   box(30, 870, 118, 133, 0, 380, VIEW === "color" ? M.woodH : M.whiteIn).position.y -= mm(ex(40));                      // piso
-  box(599, 614, 133, 785, 0, 380, M.whiteIn);                                              // división
-  box(30, 870, 0, 118, 345, 360, PLINTH).position.set(mm(450), mm(59) - mm(ex(110)), mm(352.5) + mm(ex(180))); // zócalo
-  box(30, 870, 705, 785, 365, 380, M.whiteIn).position.y += mm(ex(130));                   // travesaño frente
-  box(30, 870, 705, 785, 0, 15, M.whiteIn).position.y += mm(ex(130));                      // travesaño atrás
-  box(614, 870, 450, 465, 20, 380, M.whiteIn).position.z += mm(ex(240));                   // repisa
-  const back = box(15, 885, 0, 785, -3, 0, M.hdf, root, 0.3); back.position.z -= mm(ex(220)); // fondo
+  box(599, 614, 133, 770, 0, 380, M.whiteIn);                                              // división 637
+  CUR = 4; box(30, 870, 0, 118, 345, 360, PLINTH).position.set(mm(450), mm(59) - mm(ex(110)), mm(352.5) + mm(ex(180))); // zócalo
+  CUR = 2; box(30, 870, 770, 785, 300, 380, M.whiteIn).position.y += mm(ex(130));                   // travesaño frente (acostado)
+  box(30, 870, 770, 785, 0, 80, M.whiteIn).position.y += mm(ex(130));                      // travesaño atrás (acostado)
+  CUR = 6; box(614, 870, 450, 465, 20, 380, M.whiteIn).position.z += mm(ex(240));                   // repisa
+  CUR = 3; const back = box(15, 885, 0, 785, -3, 0, M.hdf, root, 0.3); back.position.z -= mm(ex(220)); // fondo
 }
 const fronts = [[622, 782], [459, 619], [296, 456], [133, 293]]; // y ranges (from floor)
 function drawer(i, pull) {
   const [y0, y1] = fronts[i];
-  const g = new THREE.Group(); root.add(g);
+  const g = new THREE.Group(); g.userData.drawer = true; root.add(g);
   const bx0 = 43, bx1 = 586, by0 = y0 + 22, by1 = by0 + 110, bz0 = 30, bz1 = 380;
+  CUR = 1;
   box(bx0, bx0 + 15, by0, by1, bz0, bz1, M.whiteIn, g);
   box(bx1 - 15, bx1, by0, by1, bz0, bz1, M.whiteIn, g);
   box(bx0 + 15, bx1 - 15, by0, by1, bz0, bz0 + 15, M.whiteIn, g);
   box(bx0 + 15, bx1 - 15, by0, by1, bz1 - 15, bz1, M.whiteIn, g);
   box(bx0, bx1, by0 - 3, by0, bz0, bz1, M.hdf, g, 0.3);
-  box(15, 605, y0, y1, 380, 395, FRONT, g, 1.2);
+  CUR = 6; box(15, 605, y0, y1, 380, 395, FRONT, g, 1.2);
   knob(160, (y0 + y1) / 2, 395, g); knob(460, (y0 + y1) / 2, 395, g);
-  box(bx0 - 12, bx0, by0 + 35, by0 + 70, bz0 + 10, bz1 - 10, M.metal, g, 0.5);
+  CUR = 5; box(bx0 - 12, bx0, by0 + 35, by0 + 70, bz0 + 10, bz1 - 10, M.metal, g, 0.5);
   box(bx1, bx1 + 12, by0 + 35, by0 + 70, bz0 + 10, bz1 - 10, M.metal, g, 0.5);
   if (pull > 0) {
     box(30, 34, by0 + 33, by0 + 72, 25, 370, M.metal);
@@ -153,12 +156,12 @@ function drawer(i, pull) {
 }
 function door(angleDeg) {
   const pivot = new THREE.Group(); pivot.position.set(mm(885), 0, mm(395)); root.add(pivot);
-  const d = box(608, 885, 133, 782, 380, 395, DOOR, pivot, 1.2);
+  CUR = 6; const d = box(608, 885, 133, 782, 380, 395, DOOR, pivot, 1.2);
   d.position.x -= mm(885); d.position.z -= mm(395);
   const k = knob(645, 460, 395, pivot); k.position.x -= mm(885); k.position.z -= mm(395);
-  for (const hy of [210, 700]) {
+  for (const hy of [233, 682]) {
     const h = new THREE.Mesh(new THREE.CylinderGeometry(mm(17.5), mm(17.5), mm(3), 24), M.metal);
-    h.rotation.x = Math.PI / 2; h.position.set(mm(840) - mm(885), mm(hy), mm(379) - mm(395)); pivot.add(h);
+    h.userData.step = 6; h.rotation.x = Math.PI / 2; h.position.set(mm(840) - mm(885), mm(hy), mm(379) - mm(395)); pivot.add(h);
   }
   pivot.rotation.y = THREE.MathUtils.degToRad(angleDeg);
   if (EX) { pivot.position.x += mm(360); pivot.position.z += mm(280); }
@@ -168,26 +171,27 @@ function door(angleDeg) {
 // ---------- mesa de noche 400 x 507 x 373 mm (x 0..400, carcasa z 0..358, frentes 358..373) ----------
 function mesa(ox, pull) {
   const g = new THREE.Group(); g.position.x = mm(ox); root.add(g);
-  const IN = VIEW === 'color' ? M.woodH : M.whiteIn;
-  box(0, 400, 492, 507, 0, 373, TOP, g, 2);                  // tapa
-  box(0, 15, 0, 492, 0, 358, SIDE, g);                       // costados
+  const IN = M.whiteIn; // interior blanco (como la Eter)
+  CUR = 4; box(0, 400, 492, 507, 0, 373, TOP, g, 2);                  // tapa
+  CUR = 2; box(0, 15, 0, 492, 0, 358, SIDE, g);                       // costados
   box(385, 400, 0, 492, 0, 358, SIDE, g);
   box(15, 385, 70, 85, 0, 358, IN, g);                       // piso
-  box(15, 385, 347, 362, 0, 358, IN, g);                     // repisa del nicho
-  box(15, 385, 0, 70, 323, 338, PLINTH, g);                  // zócalo retrocedido
-  box(15, 385, 412, 492, 0, 15, M.whiteIn, g);               // travesaño trasero
-  box(0, 400, 0, 492, -3, 0, M.hdf, g, 0.3);                 // fondo
+  box(15, 385, 347, 362, 0, 358, IN, g);                     // repisa del nicho (nicho libre 130 mm)
+  CUR = 4; box(15, 385, 0, 70, 323, 338, PLINTH, g);                  // zócalo 70 retrocedido
+  CUR = 2; box(15, 385, 412, 492, 0, 15, M.whiteIn, g);               // travesaño trasero
+  CUR = 3; box(0, 400, 0, 492, -3, 0, M.hdf, g, 0.3);                 // fondo
   [[217, 358], [73, 214]].forEach(([y0, y1], i) => {
-    const d = new THREE.Group(); g.add(d);
+    const d = new THREE.Group(); d.userData.drawer = true; g.add(d);
     const by0 = y0 + 20, by1 = by0 + 100, bx0 = 28, bx1 = 372, bz0 = 58, bz1 = 358;
+    CUR = 1;
     box(bx0, bx0 + 15, by0, by1, bz0, bz1, M.whiteIn, d);
     box(bx1 - 15, bx1, by0, by1, bz0, bz1, M.whiteIn, d);
     box(bx0 + 15, bx1 - 15, by0, by1, bz0, bz0 + 15, M.whiteIn, d);
     box(bx0 + 15, bx1 - 15, by0, by1, bz1 - 15, bz1, M.whiteIn, d);
     box(bx0, bx1, by0 - 3, by0, bz0, bz1, M.hdf, d, 0.3);
-    box(bx0 - 12, bx0, by0 + 30, by0 + 65, bz0 + 10, bz1 - 10, M.metal, d, 0.5);
+    CUR = 5; box(bx0 - 12, bx0, by0 + 30, by0 + 65, bz0 + 10, bz1 - 10, M.metal, d, 0.5);
     box(bx1, bx1 + 12, by0 + 30, by0 + 65, bz0 + 10, bz1 - 10, M.metal, d, 0.5);
-    box(1.5, 398.5, y0, y1, 358, 373, FRONT, d, 1.2);
+    CUR = 6; box(1.5, 398.5, y0, y1, 358, 373, FRONT, d, 1.2);
     knob(200, (y0 + y1) / 2, 373, d);
     if (i === 0 && pull) {
       d.position.z = mm(pull);
@@ -222,7 +226,7 @@ if (MODEL === 'mesa') mesa(0, VIEW === 'open' ? 200 : 0);
 if (MODEL === 'set') mesa(960, 0);
 
 // ---------- room ----------
-if (!EX) {
+if (!EX && VIEW !== 'step') {
   const floor = new THREE.Mesh(new THREE.PlaneGeometry(6, 6), M.floor);
   floor.rotation.x = -Math.PI / 2; floor.position.set(0.5, 0, 1.5); floor.receiveShadow = true; scene.add(floor);
   const wall = new THREE.Mesh(new THREE.PlaneGeometry(6, 3), M.wall);
@@ -231,7 +235,7 @@ if (!EX) {
   base.position.set(0.5, 0.04, -0.012); base.receiveShadow = true; scene.add(base);
 } else {
   const sh = new THREE.Mesh(new THREE.PlaneGeometry(6, 6), M.shadow);
-  sh.rotation.x = -Math.PI / 2; sh.position.y = -mm(170); sh.receiveShadow = true; scene.add(sh);
+  sh.rotation.x = -Math.PI / 2; sh.position.y = VIEW === 'step' ? 0 : -mm(170); sh.receiveShadow = true; scene.add(sh);
 }
 
 // ---------- lights ----------
@@ -258,11 +262,34 @@ const camsMesa = {
   color: { pos: [-0.75, 0.85, 1.4], tgt: [0.2, 0.25, 0.18], fov: 29 },
   front: { pos: [0.2, 0.27, 2.0], tgt: [0.2, 0.26, 0.18], fov: 19 },
 };
+const camsStep = {
+  comoda: { pos: [1.75, 1.35, 2.05], tgt: [0.45, 0.38, 0.2], fov: 30 },
+  comodaBack: { pos: [-0.9, 1.3, -1.6], tgt: [0.45, 0.38, 0.2], fov: 30 },
+  mesa: { pos: [1.05, 0.95, 1.3], tgt: [0.2, 0.24, 0.18], fov: 30 },
+  mesaBack: { pos: [-0.6, 0.95, -1.0], tgt: [0.2, 0.24, 0.18], fov: 30 },
+};
 const camsSet = {
   hero: { pos: [2.45, 1.3, 2.75], tgt: [0.66, 0.36, 0.2], fov: 30 },
   color: { pos: [-0.9, 1.2, 2.8], tgt: [0.7, 0.36, 0.2], fov: 30 },
 };
-const c = (MODEL === 'mesa' ? camsMesa[VIEW] : MODEL === 'set' ? camsSet[VIEW] : cams[VIEW]) || cams.hero;
+if (VIEW === 'step') {
+  const HL = new THREE.MeshStandardMaterial({ color: 0xf0a878, roughness: 0.5 });
+  const HLm = new THREE.MeshStandardMaterial({ color: 0xe07b45, roughness: 0.35, metalness: 0.3 });
+  root.traverse(o => {
+    if (!o.isMesh) return;
+    let st = o.userData.step, p = o.parent, inDrawer = false;
+    while (st === undefined && p) { st = p.userData.step; p = p.parent; }
+    for (let q = o.parent; q; q = q.parent) if (q.userData.drawer) inDrawer = true;
+    if (inDrawer && st === 1) { // cajón: se arma en el paso 1 y se instala en el 5
+      if (STEP > 1 && STEP < 5) o.visible = false;
+      else if (STEP === 1 || STEP === 5) o.material = o.material === M.hdf ? HL : HL;
+      return;
+    }
+    if (st > STEP) o.visible = false;
+    else if (st === STEP) o.material = o.material === M.metal ? HLm : HL;
+  });
+}
+const c = (VIEW === 'step' ? camsStep[(MODEL === 'mesa' ? 'mesa' : 'comoda') + (STEP === 3 ? 'Back' : '')] : (MODEL === 'mesa' ? camsMesa[VIEW] : MODEL === 'set' ? camsSet[VIEW] : cams[VIEW])) || cams.hero;
 const camera = new THREE.PerspectiveCamera(c.fov, W / H, 0.05, 30);
 camera.position.set(...c.pos); camera.lookAt(...c.tgt);
 renderer.render(scene, camera);

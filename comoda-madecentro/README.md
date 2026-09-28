@@ -1,5 +1,9 @@
 # Cómoda de 4 cajones + puerta (90 × 80 × 40 cm) con materiales Madecentro
 
+> 📘 **Manual completo de corte y armado (PDF):** [manual-armado/manual-corte-y-armado.pdf](../manual-armado/manual-corte-y-armado.pdf)
+> — incluye compra, plano de corte con IDs, cantos, perforaciones y armado paso a paso.
+> Cambio de diseño: los travesaños superiores van **acostados** bajo el sobre y la división mide **637 mm**.
+
 Réplica mejorada de la cómoda blanca de las fotos: **4 cajones a la izquierda y
 una puerta con repisa a la derecha**. Medidas exteriores **900 mm de ancho ×
 800 mm de alto × 400 mm de fondo**, con **frentes de cajón de 590 × 160 mm**.
@@ -82,9 +86,9 @@ tablero. Si en la tienda no cabe con su optimizador, usa la de 2,15 × 2,44 m.
 | 1 | Sobre | 1 | 900 × 400 | 2L + 2C |
 | 2 | Costado (lateral) | 2 | 785 × 380 | 1L (frente) + 1C (abajo) |
 | 3 | Piso | 1 | 840 × 380 | 1L |
-| 4 | División vertical | 1 | 652 × 380 | 1L |
-| 5 | Repisa (columna puerta) | 1 | 256 × 360 | 1L |
-| 6 | Travesaño superior (frente y atrás) | 2 | 840 × 80 | 1L el del frente |
+| 4 | División vertical | 1 | **637** × 380 | 1L |
+| 5 | Repisa (columna puerta) | 1 | 256 × 360 | 1 borde de 256 (frente) |
+| 6 | Travesaño superior acostado (frente y atrás) | 2 | 840 × 80 | 1L el del frente |
 | 7 | Zócalo | 1 | 840 × 118 | 1L |
 | 8 | Frente de cajón | 4 | 590 × 160 | 2L + 2C |
 | 9 | Puerta | 1 | 649 × 277 | 2L + 2C |

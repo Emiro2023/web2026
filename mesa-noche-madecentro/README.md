@@ -1,5 +1,7 @@
 # Mesa de noche 40 × 50,7 × 37,3 cm (juego con la cómoda)
 
+> 📘 **Manual completo de corte y armado (PDF):** [manual-armado/manual-corte-y-armado.pdf](../manual-armado/manual-corte-y-armado.pdf)
+
 Versión hecha en casa de la **Mesa de Noche Eter** de Bylmo: 2 cajones, un
 nicho abierto arriba y zócalo abajo. Usa **las mismas medidas exteriores**
 (40 cm de ancho, 50,7 cm de alto y 37,3 cm de fondo), pero el material, los

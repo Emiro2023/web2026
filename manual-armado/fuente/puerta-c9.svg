@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451.6 601.2" font-family="Liberation Sans, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 2 L10 5 L0 8 z" fill="#c0392b"/></marker></defs>
+<text x="60" y="18" font-size="13" font-weight="700" fill="#2b2622">C9 Puerta · cara interior</text>
+<rect x="60" y="36" width="221.60000000000002" height="519.2" fill="#f4f1ec" stroke="#2b2622" stroke-width="1.5"/>
+<circle cx="264.0" cy="475.20000000000005" r="14.0" fill="none" stroke="#2f7d78" stroke-width="2"/>
+<text x="264.0" y="457.20000000000005" font-size="10" text-anchor="middle" fill="#2f7d78">cazoleta</text>
+<circle cx="264.0" cy="116.0" r="14.0" fill="none" stroke="#2f7d78" stroke-width="2"/>
+<text x="264.0" y="98.0" font-size="10" text-anchor="middle" fill="#2f7d78">cazoleta</text>
+<circle cx="89.6" cy="293.6" r="3" fill="none" stroke="#2f7d78" stroke-width="2"/>
+<text x="89.6" y="286.6" font-size="10" text-anchor="middle" fill="#2f7d78">pomo</text>
+<line x1="60" y1="583.2" x2="281.6" y2="583.2" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="170.8" y="578.2" font-size="11" fill="#c0392b" text-anchor="middle">277</text>
+<line x1="34" y1="36" x2="34" y2="555.2" stroke="#c0392b" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/><text x="28" y="299.6" font-size="11" fill="#c0392b" text-anchor="end">649</text>
+<text x="293.6" y="50" font-size="10" fill="#555">Cazoleta Ø35 mm, 12 mm de</text>
+<text x="293.6" y="65" font-size="10" fill="#555">profundidad, centro a 22 mm</text>
+<text x="293.6" y="80" font-size="10" fill="#555">del borde derecho y a 100 mm</text>
+<text x="293.6" y="95" font-size="10" fill="#555">de arriba y de abajo.</text>
+<text x="293.6" y="110" font-size="10" fill="#555">Base en el costado derecho:</text>
+<text x="293.6" y="125" font-size="10" fill="#555">a 37 mm del frente, alturas</text>
+<text x="293.6" y="140" font-size="10" fill="#555">233 y 682 mm desde el piso.</text>
+<text x="293.6" y="155" font-size="10" fill="#555">Pomo: 37 mm del borde</text>
+<text x="293.6" y="170" font-size="10" fill="#555">izquierdo, 327 mm de abajo.</text>
+</svg>
