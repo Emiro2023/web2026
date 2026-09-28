@@ -1,18 +1,16 @@
-# Cómoda de 4 cajones + puerta (105 × 75 × 50 cm) con materiales Madecentro
+# Cómoda de 4 cajones + puerta (90 × 80 × 40 cm) con materiales Madecentro
 
 Réplica mejorada de la cómoda blanca de las fotos: **4 cajones a la izquierda y
-una puerta con repisa a la derecha**. Medidas exteriores **1050 mm de ancho ×
-750 mm de alto × 500 mm de fondo**.
+una puerta con repisa a la derecha**. Medidas exteriores **900 mm de ancho ×
+800 mm de alto × 400 mm de fondo**, con **frentes de cajón de 590 × 160 mm**.
 
 > ⚠️ Los precios son **estimados de referencia**, no precios confirmados de
 > Madecentro (no se pudo abrir madecentro.com desde el entorno de trabajo).
 > Cotiza con esta lista de cortes antes de comprar.
 
-![Vista frontal](frente.svg)
+![Infografía](infografia.jpg)
 
-## Renders e infografía
-
-![Infografía](infografia.png)
+## Renders
 
 | Cerrada | Abierta | Despiece |
 |---|---|---|
@@ -28,69 +26,71 @@ La infografía se genera desde `fuente/infografia.html`.
 
 ## Qué mejorar respecto a la cómoda actual
 
-En las fotos se ven los problemas típicos de un mueble económico:
-
 - **Cajones descolgados y desalineados** (el 3.º y el 4.º): probablemente usan
-  correderas plásticas o de rodachín que se gastan. → Aquí se usan **rieles
-  metálicos de extensión total** (con cierre lento opcional).
-- **Base del costado derecho “comida”** por la humedad del trapeado: el
-  aglomerado quedó sin canto en el borde que toca el piso. → Tablero **RH** y
-  **canto también en el borde inferior** de los costados, y zócalo retrocedido.
-- Frentes de cajón que rozan entre sí. → Holgura de **3 mm** entre frentes.
+  correderas plásticas que se gastan. → **Rieles metálicos de extensión total**
+  de 35 cm (con cierre lento opcional).
+- **Base del costado derecho “comida”** por la humedad del trapeado. → Tablero
+  **RH**, **canto también en el borde inferior** de los costados y **zócalo de
+  118 mm** retrocedido: los cajones quedan lejos del piso mojado.
+- Frentes que rozan entre sí. → Holgura de **3 mm** entre frentes.
 
 > 💡 Si la carcasa actual está sana, una opción mucho más barata es **solo
-> cambiar los rieles** de los 4 cajones (4 pares de 45 cm) y enchapar el borde
-> dañado.
+> cambiar los rieles** de los 4 cajones y enchapar el borde dañado.
 
 ## Diseño
 
 | Parte | Detalle |
 |---|---|
-| Sobre (tapa) | 1050 × 500, sobresale 15 mm a cada lado y 20 mm al frente |
-| Carcasa | 1020 × 735 × 480 mm |
-| Zócalo | 60 mm de alto, retrocedido 20 mm |
-| Columna de cajones | 660 mm libres por dentro, 4 cajones de 165 mm de frente |
-| Columna de puerta | 315 mm libres por dentro, 1 repisa regulable |
-| Material | Melamina **RH 15 mm blanca** (Pelíkano, Primadera…) + fondo HDF 3 mm |
+| Sobre (tapa) | 900 × 400, sobresale 15 mm a cada lado y 20 mm al frente |
+| Carcasa | 870 × 785 × 380 mm |
+| Cajones | 4 frentes de **590 × 160 mm**, 3 mm de holgura entre ellos |
+| Puerta | 277 × 649 mm, 1 repisa regulable adentro |
+| Zócalo | 118 mm de alto, retrocedido 20 mm |
+| Material | Melamina **RH 15 mm blanca** + fondo HDF 3 mm |
+
+**¿Por qué el zócalo mide 118 mm?** Con 4 frentes de 16 cm y 80 cm de alto
+total, el espacio que sobra queda abajo. Eso aleja los cajones del piso, que
+es donde se dañó la cómoda actual. Si prefieres un zócalo bajo (~6 cm), los
+frentes tendrían que ser de **~17,5 cm**; avísame y recalculo.
+
+Columnas por dentro: cajones **569 mm** libres, puerta **256 mm** libres.
 
 ## Lista de cortes (para Madecentro)
 
 Medidas en mm (largo × ancho). Canto: L = lado largo, C = lado corto.
 
-### Melamina RH 15 mm blanca — cabe en **1 lámina** de 2,15 × 2,44 m
+### Melamina RH 15 mm blanca — cabe en **1 lámina** de 2,15 × 2,44 m (sobra material)
 
 | # | Pieza | Cant. | Medida | Canto |
 |---|---|---|---|---|
-| 1 | Sobre | 1 | 1050 × 500 | 2L + 2C |
-| 2 | Costado (lateral) | 2 | 735 × 480 | 1L (frente) + 1C (abajo) |
-| 3 | Piso | 1 | 990 × 480 | 1L |
-| 4 | División vertical | 1 | 660 × 480 | 1L |
-| 5 | Repisa (columna puerta) | 1 | 315 × 460 | 1L |
-| 6 | Travesaño superior (frente y atrás) | 2 | 990 × 80 | 1L el del frente |
-| 7 | Zócalo | 1 | 990 × 60 | 1L |
-| 8 | Frente de cajón | 4 | 680 × 165 | 2L + 2C |
-| 9 | Puerta | 1 | 669 × 336 | 2L + 2C |
-| 10 | Costado de cajón | 8 | 450 × 120 | 1L (arriba) |
-| 11 | Frente/fondo interno de cajón | 8 | 604 × 120 | 1L (arriba) |
+| 1 | Sobre | 1 | 900 × 400 | 2L + 2C |
+| 2 | Costado (lateral) | 2 | 785 × 380 | 1L (frente) + 1C (abajo) |
+| 3 | Piso | 1 | 840 × 380 | 1L |
+| 4 | División vertical | 1 | 652 × 380 | 1L |
+| 5 | Repisa (columna puerta) | 1 | 256 × 360 | 1L |
+| 6 | Travesaño superior (frente y atrás) | 2 | 840 × 80 | 1L el del frente |
+| 7 | Zócalo | 1 | 840 × 118 | 1L |
+| 8 | Frente de cajón | 4 | 590 × 160 | 2L + 2C |
+| 9 | Puerta | 1 | 649 × 277 | 2L + 2C |
+| 10 | Costado de cajón | 8 | 350 × 110 | 1L (arriba) |
+| 11 | Frente/fondo interno de cajón | 8 | 513 × 110 | 1L (arriba) |
 
-Son 30 piezas de melamina (escala de corte “26–35 piezas”). El despiece está
-calculado para caber en una lámina, pero queda justo: pide a Madecentro que lo
-optimice y, si no cabe, que te cotice un retal extra.
+30 piezas (escala de corte “26–35 piezas”).
 
 ### HDF 3 mm blanco — 1 lámina
 
 | # | Pieza | Cant. | Medida |
 |---|---|---|---|
-| 12 | Fondo del mueble | 1 | 1020 × 735 |
-| 13 | Base de cajón | 4 | 634 × 450 |
+| 12 | Fondo del mueble | 1 | 870 × 785 |
+| 13 | Base de cajón | 4 | 543 × 350 |
 
-**Canto PVC blanco 22 mm:** ~30 m (incluye desperdicio).
+**Canto PVC blanco 22 mm:** ~25 m (incluye desperdicio).
 
 ## Herrajes
 
 | Herraje | Cant. | Nota |
 |---|---|---|
-| Riel de extensión total **45 cm** (ideal cierre lento) | 4 pares | Cajón de 634 mm de ancho exterior para riel de 12,7 mm por lado |
+| Riel de extensión total **35 cm** (ideal cierre lento) | 4 pares | Cajón de 543 mm de ancho exterior para riel de 12,7 mm por lado |
 | Bisagra cazoleta 35 mm **recta** (cierre lento) | 2 | Van en el costado derecho, que la puerta cubre completo |
 | Pomo / manija | 9 | 2 por cajón + 1 en la puerta (puedes reutilizar las estrellas actuales) |
 | Pin de repisa 5 mm | 4 | |
@@ -106,27 +106,30 @@ optimice y, si no cabe, que te cotice un retal extra.
 | 1 lámina melamina RH 15 mm blanca | $230.000 – $320.000 |
 | 1 lámina HDF 3 mm | $55.000 – $85.000 |
 | Corte (26–35 piezas) | $25.000 – $50.000 |
-| Canto + enchape (~30 m) | $75.000 – $140.000 |
-| 4 pares de rieles 45 cm | $70.000 (sencillos) – $240.000 (cierre lento) |
+| Canto + enchape (~25 m) | $65.000 – $120.000 |
+| 4 pares de rieles 35 cm | $65.000 (sencillos) – $220.000 (cierre lento) |
 | 2 bisagras | $8.000 – $25.000 |
 | Pomos, pines, tornillería, anclaje | $30.000 – $90.000 |
-| **Total aproximado** | **≈ $500.000 – $950.000** |
+| **Total aproximado** | **≈ $480.000 – $910.000** |
+
+La lámina de melamina queda con bastante sobrante: alcanza para piezas extra
+(por ejemplo, una segunda repisa o una mesita de noche pequeña).
 
 ## Armado
 
 1. Arma los 4 cajones: costados por fuera, frente/fondo interno por dentro,
    base de HDF clavada por debajo. Comprueba que queden a escuadra.
-2. Carcasa: piso entre los costados a 60 mm del suelo, división a 660 mm libres
+2. Carcasa: piso entre los costados a 118 mm del suelo, división a 569 mm libres
    del costado izquierdo, travesaños arriba. Clava el fondo de HDF (escuadra el mueble).
 3. Atornilla el zócalo retrocedido y luego el sobre por dentro, desde los travesaños.
-4. Instala los rieles: primero el cajón de abajo, dejando 3 mm entre frentes.
+4. Instala los rieles empezando por el cajón de abajo y deja 3 mm entre frentes.
    Atornilla los frentes exteriores al cajón desde dentro.
 5. Instala la puerta, ajusta las bisagras y pon la repisa.
 6. **Ancla la cómoda a la pared.**
 
 ## Variantes fáciles
 
-- **Más ancha / más alta:** cambia solo las medidas de los costados, el piso, la
-  división y los frentes; los cajones siguen la misma lógica.
-- **Color:** sobre y frentes en madera (rovere, macadamia) con carcasa blanca.
-- **Sobre más grueso:** pídelo en 25–30 mm o doble de 15 mm para que se vea más robusto.
+- **Color:** sobre y frentes en madera (rovere, macadamia) con carcasa blanca
+  (ver render 5; requiere una lámina adicional en color).
+- **Zócalo bajo:** frentes de ~17,5 cm y zócalo de 6 cm.
+- **Sobre más grueso:** en 25–30 mm o doble de 15 mm para que se vea más robusto.

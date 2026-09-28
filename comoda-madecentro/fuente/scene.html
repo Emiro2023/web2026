@@ -114,71 +114,66 @@ function knob(x, y, z, parent = root) {
 // ---------- the chest (x: 0..1050 left→right, y: floor up, z: back 0 → front 480) ----------
 const EX = VIEW === 'exploded';
 const ex = (v) => EX ? v : 0; // explode offsets
+// Medidas: 900 x 800 x 400 mm; frentes de cajón 590 x 160
 function carcass() {
-  box(0, 1050, 735, 750, 0, 500, TOP, root, 2).position.y += mm(ex(260));                 // sobre
-  box(15, 30, 0, 735, 0, 480, M.white).position.x -= mm(ex(160));                          // costado izq
-  box(1020, 1035, 0, 735, 0, 480, M.white).position.x += mm(ex(160));                      // costado der
-  box(30, 1020, 60, 75, 0, 480, M.whiteIn).position.y -= mm(ex(40));                       // piso
-  box(690, 705, 75, 735, 0, 480, M.whiteIn).position.y += mm(ex(0));                       // división
-  box(30, 1020, 0, 60, 445, 460, M.white).position.set(mm(525), mm(30) - mm(ex(120)), mm(452.5) + mm(ex(200))); // zócalo
-  box(30, 1020, 655, 735, 465, 480, M.whiteIn).position.y += mm(ex(140));                  // travesaño frente
-  box(30, 1020, 655, 735, 0, 15, M.whiteIn).position.y += mm(ex(140));                     // travesaño atrás
-  box(705, 1020, 370, 385, 20, 480, M.whiteIn).position.z += mm(ex(260));                   // repisa
-  const back = box(15, 1035, 0, 735, -3, 0, M.hdf, root, 0.3); back.position.z -= mm(ex(260)); // fondo
+  box(0, 900, 785, 800, 0, 400, TOP, root, 2).position.y += mm(ex(240));                   // sobre
+  box(15, 30, 0, 785, 0, 380, M.white).position.x -= mm(ex(150));                          // costado izq
+  box(870, 885, 0, 785, 0, 380, M.white).position.x += mm(ex(150));                        // costado der
+  box(30, 870, 118, 133, 0, 380, M.whiteIn).position.y -= mm(ex(40));                      // piso
+  box(599, 614, 133, 785, 0, 380, M.whiteIn);                                              // división
+  box(30, 870, 0, 118, 345, 360, M.white).position.set(mm(450), mm(59) - mm(ex(110)), mm(352.5) + mm(ex(180))); // zócalo
+  box(30, 870, 705, 785, 365, 380, M.whiteIn).position.y += mm(ex(130));                   // travesaño frente
+  box(30, 870, 705, 785, 0, 15, M.whiteIn).position.y += mm(ex(130));                      // travesaño atrás
+  box(614, 870, 450, 465, 20, 380, M.whiteIn).position.z += mm(ex(240));                   // repisa
+  const back = box(15, 885, 0, 785, -3, 0, M.hdf, root, 0.3); back.position.z -= mm(ex(220)); // fondo
 }
-const fronts = [[567, 732], [399, 564], [231, 396], [63, 228]]; // y ranges (from floor)
+const fronts = [[622, 782], [459, 619], [296, 456], [133, 293]]; // y ranges (from floor)
 function drawer(i, pull) {
   const [y0, y1] = fronts[i];
   const g = new THREE.Group(); root.add(g);
-  // box
-  const bx0 = 43, bx1 = 677, by0 = y0 + 22, by1 = by0 + 120, bz0 = 30, bz1 = 480;
+  const bx0 = 43, bx1 = 586, by0 = y0 + 22, by1 = by0 + 110, bz0 = 30, bz1 = 380;
   box(bx0, bx0 + 15, by0, by1, bz0, bz1, M.whiteIn, g);
   box(bx1 - 15, bx1, by0, by1, bz0, bz1, M.whiteIn, g);
   box(bx0 + 15, bx1 - 15, by0, by1, bz0, bz0 + 15, M.whiteIn, g);
   box(bx0 + 15, bx1 - 15, by0, by1, bz1 - 15, bz1, M.whiteIn, g);
   box(bx0, bx1, by0 - 3, by0, bz0, bz1, M.hdf, g, 0.3);
-  // front
-  box(15, 695, y0, y1, 480, 495, FRONT, g, 1.2);
-  knob(175, (y0 + y1) / 2, 495, g); knob(535, (y0 + y1) / 2, 495, g);
-  // rails (moving part)
-  box(bx0 - 12, bx0, by0 + 40, by0 + 75, bz0 + 10, bz1 - 10, M.metal, g, 0.5);
-  box(bx1, bx1 + 12, by0 + 40, by0 + 75, bz0 + 10, bz1 - 10, M.metal, g, 0.5);
-  // fixed rail part
+  box(15, 605, y0, y1, 380, 395, FRONT, g, 1.2);
+  knob(160, (y0 + y1) / 2, 395, g); knob(460, (y0 + y1) / 2, 395, g);
+  box(bx0 - 12, bx0, by0 + 35, by0 + 70, bz0 + 10, bz1 - 10, M.metal, g, 0.5);
+  box(bx1, bx1 + 12, by0 + 35, by0 + 70, bz0 + 10, bz1 - 10, M.metal, g, 0.5);
   if (pull > 0) {
-    box(30, 34, by0 + 38, by0 + 77, 25, 470, M.metal);
-    box(686, 690, by0 + 38, by0 + 77, 25, 470, M.metal);
+    box(30, 34, by0 + 33, by0 + 72, 25, 370, M.metal);
+    box(595, 599, by0 + 33, by0 + 72, 25, 370, M.metal);
   }
   g.position.z = mm(pull);
-  if (EX) { g.position.z = mm(420 + i * 30); g.position.y = mm((1.5 - i) * 25); }
+  if (EX) { g.position.z = mm(340 + i * 25); g.position.y = mm((1.5 - i) * 22); }
 }
 function door(angleDeg) {
-  const pivot = new THREE.Group(); pivot.position.set(mm(1035), 0, mm(495)); root.add(pivot);
-  const d = box(699, 1035, 63, 732, 480, 495, DOOR, pivot, 1.2);
-  d.position.x -= mm(1035); d.position.z -= mm(495);
-  const k = knob(740, 400, 495, pivot); k.position.x -= mm(1035); k.position.z -= mm(495);
-  // hinges (visible when open)
-  for (const hy of [140, 650]) {
+  const pivot = new THREE.Group(); pivot.position.set(mm(885), 0, mm(395)); root.add(pivot);
+  const d = box(608, 885, 133, 782, 380, 395, DOOR, pivot, 1.2);
+  d.position.x -= mm(885); d.position.z -= mm(395);
+  const k = knob(645, 460, 395, pivot); k.position.x -= mm(885); k.position.z -= mm(395);
+  for (const hy of [210, 700]) {
     const h = new THREE.Mesh(new THREE.CylinderGeometry(mm(17.5), mm(17.5), mm(3), 24), M.metal);
-    h.rotation.x = Math.PI / 2; h.position.set(mm(990) - mm(1035), mm(hy), mm(479) - mm(495)); pivot.add(h);
+    h.rotation.x = Math.PI / 2; h.position.set(mm(840) - mm(885), mm(hy), mm(379) - mm(395)); pivot.add(h);
   }
   pivot.rotation.y = THREE.MathUtils.degToRad(angleDeg);
-  if (EX) { pivot.position.x += mm(420); pivot.position.z += mm(330); }
+  if (EX) { pivot.position.x += mm(360); pivot.position.z += mm(280); }
 }
 
 carcass();
-if (VIEW === 'open') { drawer(0, 210); drawer(1, 400); drawer(2, 0); drawer(3, 120); door(105); }
+if (VIEW === 'open') { drawer(0, 180); drawer(1, 300); drawer(2, 0); drawer(3, 100); door(105); }
 else { for (let i = 0; i < 4; i++) drawer(i, 0); door(0); }
 
-// folded clothes in the open drawer / shelf
 if (VIEW === 'open') {
   const colors = [0x8fb3d9, 0xf2b8c6, 0xf5e6a8, 0xb9d9b4, 0xd8c4ec];
   const cloth = (x0, x1, y0, h, z0, z1, c, par) => box(x0, x1, y0, y0 + h, z0, z1, new THREE.MeshStandardMaterial({ color: c, roughness: 0.95 }), par, 12);
-  const g1 = new THREE.Group(); root.add(g1); g1.position.z = mm(400);
-  for (let k = 0; k < 3; k++) cloth(70 + k * 200, 250 + k * 200, 399 + 22, 55, 60, 450, colors[k], g1);
-  const g2 = new THREE.Group(); root.add(g2); g2.position.z = mm(210);
-  for (let k = 0; k < 3; k++) cloth(70 + k * 200, 250 + k * 200, 567 + 22, 45, 60, 450, colors[(k + 2) % 5], g2);
-  for (let k = 0; k < 3; k++) cloth(725, 1000, 385 + k * 60, 55, 90, 440, colors[(k + 3) % 5], root);
-  for (let k = 0; k < 2; k++) cloth(725, 1000, 75 + k * 70, 60, 90, 440, colors[k], root);
+  const g1 = new THREE.Group(); root.add(g1); g1.position.z = mm(300);
+  for (let k = 0; k < 3; k++) cloth(65 + k * 170, 220 + k * 170, 459 + 22, 55, 60, 350, colors[k], g1);
+  const g2 = new THREE.Group(); root.add(g2); g2.position.z = mm(180);
+  for (let k = 0; k < 3; k++) cloth(65 + k * 170, 220 + k * 170, 622 + 22, 45, 60, 350, colors[(k + 2) % 5], g2);
+  for (let k = 0; k < 3; k++) cloth(630, 855, 465 + k * 60, 55, 60, 350, colors[(k + 3) % 5], root);
+  for (let k = 0; k < 3; k++) cloth(630, 855, 133 + k * 65, 60, 60, 350, colors[k], root);
 }
 
 // ---------- room ----------
@@ -206,11 +201,11 @@ const fill = new THREE.DirectionalLight(0xe6eeff, 0.35); fill.position.set(2.5, 
 
 // ---------- camera ----------
 const cams = {
-  hero: { pos: [2.25, 1.25, 2.45], tgt: [0.5, 0.36, 0.25], fov: 29 },
-  open: { pos: [2.1, 1.45, 2.6], tgt: [0.55, 0.33, 0.4], fov: 31 },
-  color: { pos: [-1.0, 1.15, 2.5], tgt: [0.55, 0.36, 0.25], fov: 29 },
-  front: { pos: [0.525, 0.4, 3.2], tgt: [0.525, 0.38, 0.25], fov: 20 },
-  exploded: { pos: [2.6, 1.75, 3.0], tgt: [0.62, 0.4, 0.45], fov: 34 },
+  hero: { pos: [2.0, 1.25, 2.2], tgt: [0.44, 0.39, 0.2], fov: 29 },
+  open: { pos: [1.85, 1.45, 2.3], tgt: [0.47, 0.36, 0.32], fov: 31 },
+  color: { pos: [-0.85, 1.15, 2.2], tgt: [0.47, 0.39, 0.2], fov: 29 },
+  front: { pos: [0.45, 0.42, 3.0], tgt: [0.45, 0.41, 0.2], fov: 20 },
+  exploded: { pos: [2.3, 1.7, 2.7], tgt: [0.52, 0.42, 0.38], fov: 34 },
 };
 const c = cams[VIEW] || cams.hero;
 const camera = new THREE.PerspectiveCamera(c.fov, W / H, 0.05, 30);
