@@ -96,6 +96,21 @@ $120.000 – $265.000.
 
 Como referencia, solo la mesa Eter de Bylmo cuesta $239.900.
 
+### ¿Cuánto cuesta cada mueble?
+
+La lámina y el HDF se reparten según el área que usa cada mueble: la cómoda
+usa el 72 % de la melamina y la mesa el 28 %.
+
+| Mueble | Blanco (rango) | **Blanco realista** | **Cartagena realista** |
+|---|---|---|---|
+| Cómoda 90 × 80 × 40 | $420.000 – $750.000 | **≈ $480.000** | **≈ $550.000** |
+| Mesa de noche 40 × 50,7 × 37,3 | $170.000 – $320.000 | **≈ $200.000** | **≈ $230.000** |
+| **Juego completo** | $590.000 – $1.070.000 | **≈ $680.000** | **≈ $780.000** |
+
+El precio de la mesa aplica si sale del sobrante de la lámina de la cómoda.
+Si la mesa se hace sola, habría que comprarle una lámina entera, y entonces
+sale más cara que la Eter ($239.900).
+
 ## Herrajes
 
 | Herraje | Cant. | Nota |
