@@ -106,14 +106,14 @@ tablero. Si en la tienda no cabe con su optimizador, usa la de 2,15 × 2,44 m.
 
 | Herraje | Cant. | Nota |
 |---|---|---|
-| Riel de extensión total **35 cm** (ideal cierre lento) | 4 pares | Cajón de 543 mm de ancho exterior para riel de 12,7 mm por lado |
+| Riel extensión total carga media 38 kg (Mobile, desde $5.917 el par) **35 cm** | 4 pares | Cajón de 543 mm de ancho exterior para riel de 12,7 mm por lado |
 | Bisagra cazoleta cierre lento **parche** (Bonuit, $3.137 el par) | 1 par | Van en el costado derecho, que la puerta cubre completo |
 | Pomo / manija | 9 | 2 por cajón + 1 en la puerta (puedes reutilizar las estrellas actuales) |
 | Pin de repisa 5 mm | 4 | |
-| Tornillo para aglomerado 4 × 40 mm | ~50 | Carcasa y cajones |
-| Tornillo 3,5 × 16 mm | ~50 | Rieles y bisagras |
+| Tornillo de ensamble 6 × 2" (caja × 100, $6.419) | ~50 | Carcasa y cajones |
+| Tornillos para rieles y bisagras | — | Vienen incluidos (12 por par) |
 | Puntillas o grapas | 1 caja | Fondo y bases de cajón |
-| Escuadra anti-volteo | 1 | **Fijar a la pared**: con niños, una cómoda con cajones abiertos se puede voltear |
+| Cantonera 19 × 12 mm ($296) + taco y tornillo a la pared | 2 | **Fijar a la pared**: con niños, una cómoda con cajones abiertos se puede voltear |
 
 ## Presupuesto estimado (COP — verificar en Madecentro)
 

@@ -77,39 +77,47 @@ comprobado que caben. El cálculo está en `despiece.py`.
 
 ## Costo aproximado del juego (cómoda + mesa de noche, 1 lámina)
 
-| Concepto | Blanco | Cartagena |
-|---|---|---|
-| 1 lámina melamina RH 15 mm 2,15 × 2,44 *(precio web)* | $266.410 | $365.872 |
-| 1 lámina HDF 3 mm | $55.000 – $85.000 | $55.000 – $85.000 |
-| Corte (47 piezas) | $35.000 – $75.000 | $35.000 – $75.000 |
-| Canto + enchape (~35 m) | $90.000 – $170.000 | $90.000 – $170.000 |
-| Rieles: 4 pares de 35 cm + 2 pares de 30 cm | $95.000 – $330.000 | $95.000 – $330.000 |
-| 1 par de bisagras cierre lento Bonuit, parche *(precio web)* | $3.137 | $3.137 |
-| Pomos, pines, tornillería, anclaje | $45.000 – $130.000 | $45.000 – $130.000 |
-| **Total** | **≈ $590.000 – $1.060.000** | **≈ $690.000 – $1.160.000** |
+Precios de madecentro.com (sept. 2026) marcados con 💲. Lo demás es estimado.
 
-**Estimado realista en blanco: ≈ $680.000.** Supone rieles sencillos,
-bisagras eco y las estrellas actuales como pomos.
+| Concepto | Cómoda | Mesa | Juego |
+|---|---|---|---|
+| 💲 Lámina blanca RH 15 mm 2,15 × 2,44 ($266.410, repartida 72 / 28 %) | $192.900 | $73.500 | $266.410 |
+| HDF 3 mm (1 lámina, 78 / 22 %) | $43.000 – $66.000 | $12.000 – $19.000 | $55.000 – $85.000 |
+| Corte (47 piezas) | $22.000 – $48.000 | $13.000 – $27.000 | $35.000 – $75.000 |
+| Canto + enchape (25 m + 10 m) | $65.000 – $120.000 | $25.000 – $50.000 | $90.000 – $170.000 |
+| 💲 Rieles extensión total Mobile 38 kg (desde $5.917 el par*) | 4 pares 35 cm ≈ $24.000 – $36.000 | 2 pares 30 cm ≈ $12.000 – $18.000 | $36.000 – $54.000 |
+| 💲 Bisagras cierre lento Bonuit parche ($3.137 el par) | 1 par $3.137 | — | $3.137 |
+| 💲 Tornillo ensamble 6 × 2" caja × 100 ($6.419, alcanza para los dos) | $4.300 | $2.100 | $6.419 |
+| 💲 Cantonera 19 × 12 mm ($296 c/u): 4 para el sobre + 2 anti-volteo / 2 para la tapa | $1.776 | $592 | $2.368 |
+| Pines de repisa, tacos para pared | ≈ $4.000 | — | ≈ $4.000 |
+| Pomos | $0 (reusar estrellas) | $0 (reusar estrellas) | $0 – $30.000 si compras nuevos |
 
-Con los cajones metálicos **Bonuit MAX** en la cómoda, súmale unos
-$120.000 – $265.000.
-
-Como referencia, solo la mesa Eter de Bylmo cuesta $239.900.
+\* $5.917 es el precio del riel de **25 cm**. En "Selecciona tu medida" elige
+**35 cm** (cómoda) y **30 cm** (mesa); pueden costar un poco más. Cada par trae
+12 tornillos, igual que las bisagras, así que no hace falta comprar tornillos
+pequeños aparte.
 
 ### ¿Cuánto cuesta cada mueble?
 
-La lámina y el HDF se reparten según el área que usa cada mueble: la cómoda
-usa el 72 % de la melamina y la mesa el 28 %.
-
-| Mueble | Blanco (rango) | **Blanco realista** | **Cartagena realista** |
+| Mueble | Rango (blanco) | **Blanco realista** | **Cartagena realista** |
 |---|---|---|---|
-| Cómoda 90 × 80 × 40 | $420.000 – $740.000 | **≈ $480.000** | **≈ $550.000** |
-| Mesa de noche 40 × 50,7 × 37,3 | $170.000 – $320.000 | **≈ $200.000** | **≈ $230.000** |
-| **Juego completo** | $590.000 – $1.060.000 | **≈ $680.000** | **≈ $780.000** |
+| Cómoda 90 × 80 × 40 | $360.000 – $495.000 | **≈ $410.000** | **≈ $480.000** |
+| Mesa de noche 40 × 50,7 × 37,3 | $140.000 – $200.000 | **≈ $160.000** | **≈ $190.000** |
+| **Juego completo** | $500.000 – $695.000 | **≈ $570.000** | **≈ $670.000** |
 
-El precio de la mesa aplica si sale del sobrante de la lámina de la cómoda.
-Si la mesa se hace sola, habría que comprarle una lámina entera, y entonces
-sale más cara que la Eter ($239.900).
+Los rieles reales de Mobile ($5.917 el par) resultaron mucho más baratos de lo
+estimado, por eso el total bajó unos $110.000. Lo único que sigue estimado es
+el **HDF, el corte y el enchape**, que se cotizan con el servicio de tableros a
+la medida de la página.
+
+El juego completo (≈ $570.000) supera los $500.001, así que **aplica el envío
+a domicilio**.
+
+**Opcional: patas en lugar de zócalo.** La pata de acero diagonal de 100 mm
+(Mobile, $2.394 c/u, cromada o negra) deja el mueble elevado y permite
+**trapear por debajo**, que fue lo que dañó la cómoda anterior. Para la cómoda
+son 4 patas ($9.576) y para la mesa otras 4 ($9.576); con eso sobran los
+zócalos. Si la quieres, ajusto el diseño y los renders.
 
 ### Datos de madecentro.com que afectan la compra (sept. 2026)
 
@@ -133,27 +141,11 @@ sale más cara que la Eter ($239.900).
 
 | Herraje | Cant. | Nota |
 |---|---|---|
-| Riel de extensión total **30 cm** | 2 pares | Cajón de 344 mm de ancho exterior |
+| Riel extensión total carga media 38 kg (Mobile) **30 cm** | 2 pares | Cajón de 344 mm de ancho exterior; cada par trae 12 tornillos |
 | Pomo de estrella | 2 | Uno centrado por cajón (o una manija como la Eter) |
-| Tornillo 4 × 40 mm | ~24 | |
-| Tornillo 3,5 × 16 mm | ~24 | Rieles |
+| Tornillo de ensamble 6 × 2" | ~24 | De la misma caja × 100 de la cómoda |
 
 No lleva bisagras ni necesita anclaje a la pared, porque es baja.
-
-## Presupuesto de la mesa (lo que se suma a la cómoda)
-
-| Concepto | Estimado |
-|---|---|
-| Diferencia lámina 2,15 × 2,44 vs 1,83 × 2,44 (blanca, precio web) | **$39.654** |
-| Corte extra (pasa a la escala de 36–50 piezas) | $10.000 – $25.000 |
-| Canto + enchape (~10 m) | $25.000 – $50.000 |
-| 2 pares de rieles 30 cm | $30.000 – $110.000 |
-| 2 pomos + tornillería | $15.000 – $40.000 |
-| **Total extra** | **≈ $120.000 – $265.000** |
-
-En Cartagena la lámina **no suma nada**, porque la cómoda en Cartagena ya usa
-la lámina de 2,15 × 2,44 y la mesa sale de su sobrante. En ese caso la mesa
-cuesta **≈ $80.000 – $225.000**.
 
 ## Armado
 
