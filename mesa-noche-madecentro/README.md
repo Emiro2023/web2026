@@ -75,6 +75,27 @@ que corten **las dos listas en la misma lámina**. El optimizador de la tienda
 puede acomodar las piezas de otra forma; lo importante es que ya está
 comprobado que caben. El cálculo está en `despiece.py`.
 
+## Costo aproximado del juego (cómoda + mesa de noche, 1 lámina)
+
+| Concepto | Blanco | Cartagena |
+|---|---|---|
+| 1 lámina melamina RH 15 mm 2,15 × 2,44 *(precio web)* | $266.410 | $365.872 |
+| 1 lámina HDF 3 mm | $55.000 – $85.000 | $55.000 – $85.000 |
+| Corte (47 piezas) | $35.000 – $75.000 | $35.000 – $75.000 |
+| Canto + enchape (~35 m) | $90.000 – $170.000 | $90.000 – $170.000 |
+| Rieles: 4 pares de 35 cm + 2 pares de 30 cm | $95.000 – $330.000 | $95.000 – $330.000 |
+| 2 bisagras *(precio web)* | $3.414 – $15.132 | $3.414 – $15.132 |
+| Pomos, pines, tornillería, anclaje | $45.000 – $130.000 | $45.000 – $130.000 |
+| **Total** | **≈ $590.000 – $1.070.000** | **≈ $690.000 – $1.170.000** |
+
+**Estimado realista en blanco: ≈ $680.000.** Supone rieles sencillos,
+bisagras eco y las estrellas actuales como pomos.
+
+Con los cajones metálicos **Bonuit MAX** en la cómoda, súmale unos
+$120.000 – $265.000.
+
+Como referencia, solo la mesa Eter de Bylmo cuesta $239.900.
+
 ## Herrajes
 
 | Herraje | Cant. | Nota |
