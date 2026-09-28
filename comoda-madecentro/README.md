@@ -10,6 +10,22 @@ una puerta con repisa a la derecha**. Medidas exteriores **1050 mm de ancho ×
 
 ![Vista frontal](frente.svg)
 
+## Renders e infografía
+
+![Infografía](infografia.png)
+
+| Cerrada | Abierta | Despiece |
+|---|---|---|
+| ![](renders/1-cerrada.png) | ![](renders/2-abierta.png) | ![](renders/3-despiece.png) |
+
+| Frente | Variante madera |
+|---|---|
+| ![](renders/4-frente.png) | ![](renders/5-variante-madera.png) |
+
+Los renders son un modelo 3D a escala real hecho con la lista de cortes
+(`fuente/scene.html`, Three.js; vistas con `?view=hero|open|exploded|front|color`).
+La infografía se genera desde `fuente/infografia.html`.
+
 ## Qué mejorar respecto a la cómoda actual
 
 En las fotos se ven los problemas típicos de un mueble económico:

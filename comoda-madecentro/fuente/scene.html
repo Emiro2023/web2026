@@ -1,0 +1,221 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#fff;overflow:hidden}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+
+const P = new URLSearchParams(location.search);
+const VIEW = P.get('view') || 'hero';
+const W = +(P.get('w') || 1600), H = +(P.get('h') || 1200);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1);
+renderer.setSize(W, H);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 0.9;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+scene.environmentIntensity = 0.35;
+scene.background = new THREE.Color(VIEW === 'exploded' ? 0xf4f1ec : 0xd9d2c7);
+
+// ---------- textures ----------
+function canvasTex(w, h, draw, rep = [1, 1]) {
+  const c = document.createElement('canvas'); c.width = w; c.height = h;
+  draw(c.getContext('2d'), w, h);
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  t.repeat.set(...rep); t.anisotropy = 8; return t;
+}
+function rand(seed) { let s = seed; return () => (s = (s * 16807) % 2147483647) / 2147483647; }
+const tileTex = canvasTex(1024, 1024, (g, w, h) => {
+  const r = rand(7);
+  for (let i = 0; i < 2; i++) for (let j = 0; j < 2; j++) {
+    const x = i * w / 2, y = j * h / 2;
+    g.fillStyle = `hsl(210, 5%, ${76 + r() * 4}%)`; g.fillRect(x, y, w / 2, h / 2);
+    for (let k = 0; k < 40; k++) { // marble veins
+      g.strokeStyle = `rgba(150,155,165,${0.08 + r() * 0.12})`; g.lineWidth = 1 + r() * 2;
+      g.beginPath(); let px = x + r() * w / 2, py = y + r() * h / 2; g.moveTo(px, py);
+      for (let s = 0; s < 6; s++) { px += (r() - .5) * 90; py += (r() - .5) * 90; g.lineTo(Math.min(Math.max(px, x), x + w / 2), Math.min(Math.max(py, y), y + h / 2)); }
+      g.stroke();
+    }
+  }
+  g.strokeStyle = '#b9bcc2'; g.lineWidth = 4;
+  for (let i = 0; i <= 2; i++) { g.beginPath(); g.moveTo(i * w / 2, 0); g.lineTo(i * w / 2, h); g.stroke(); g.beginPath(); g.moveTo(0, i * h / 2); g.lineTo(w, i * h / 2); g.stroke(); }
+}, [6, 6]);
+function woodTex(base, dark, seed) {
+  return canvasTex(512, 2048, (g, w, h) => {
+    const r = rand(seed);
+    g.fillStyle = base; g.fillRect(0, 0, w, h);
+    for (let i = 0; i < 180; i++) {
+      const x = r() * w; g.strokeStyle = dark.replace('A', (0.05 + r() * 0.18).toFixed(2));
+      g.lineWidth = 0.5 + r() * 3; g.beginPath(); g.moveTo(x, 0);
+      for (let y = 0; y <= h; y += 64) g.lineTo(x + Math.sin(y / 420 + i) * 4 + (r() - .5) * 1.5, y);
+      g.stroke();
+    }
+  });
+}
+const rovere = woodTex('#b58d63', 'rgba(90,58,30,A)', 3);
+
+// ---------- materials ----------
+const M = {
+  white: new THREE.MeshStandardMaterial({ color: 0xf3f2ee, roughness: 0.42, metalness: 0 }),
+  whiteIn: new THREE.MeshStandardMaterial({ color: 0xe9e8e3, roughness: 0.5 }),
+  hdf: new THREE.MeshStandardMaterial({ color: 0xf0efea, roughness: 0.7 }),
+  wood: new THREE.MeshStandardMaterial({ map: rovere, roughness: 0.55 }),
+  knob: new THREE.MeshStandardMaterial({ color: 0xfafafa, roughness: 0.25 }),
+  metal: new THREE.MeshStandardMaterial({ color: 0xc9ccd1, roughness: 0.3, metalness: 0.45 }),
+  floor: new THREE.MeshStandardMaterial({ map: tileTex, roughness: 0.25 }),
+  wall: new THREE.MeshStandardMaterial({ color: 0xe3dccf, roughness: 0.95 }),
+  shadow: new THREE.ShadowMaterial({ opacity: 0.18 }),
+};
+const rovereH = rovere.clone(); rovereH.center.set(0.5, 0.5); rovereH.rotation = Math.PI / 2; rovereH.repeat.set(1, 0.6); rovereH.needsUpdate = true;
+M.woodH = new THREE.MeshStandardMaterial({ map: rovereH, roughness: 0.55 });
+const FRONT = VIEW === 'color' ? M.woodH : M.white;
+const DOOR = VIEW === 'color' ? M.wood : M.white;
+const TOP = VIEW === 'color' ? M.woodH : M.white;
+
+// ---------- helpers (units: mm → m) ----------
+const mm = v => v / 1000;
+const root = new THREE.Group(); scene.add(root);
+function box(x0, x1, y0, y1, z0, z1, mat, parent = root, r = 0.8) {
+  const w = mm(x1 - x0), h = mm(y1 - y0), d = mm(z1 - z0);
+  const geo = new RoundedBoxGeometry(w, h, d, 2, Math.min(mm(r), w / 2.1, h / 2.1, d / 2.1));
+  const m = new THREE.Mesh(geo, mat);
+  m.position.set(mm((x0 + x1) / 2), mm((y0 + y1) / 2), mm((z0 + z1) / 2));
+  m.castShadow = m.receiveShadow = true; parent.add(m); return m;
+}
+const starShape = (() => {
+  const s = new THREE.Shape(), R = mm(19), r = mm(9);
+  for (let i = 0; i < 10; i++) {
+    const a = Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r : R;
+    const x = Math.cos(a) * rr, y = Math.sin(a) * rr; i ? s.lineTo(x, y) : s.moveTo(x, y);
+  } s.closePath(); return s;
+})();
+function knob(x, y, z, parent = root) {
+  const g = new THREE.Group();
+  const stem = new THREE.Mesh(new THREE.CylinderGeometry(mm(6), mm(8), mm(14), 20), M.knob);
+  stem.rotation.x = Math.PI / 2; stem.position.z = mm(7); g.add(stem);
+  const star = new THREE.Mesh(new THREE.ExtrudeGeometry(starShape, { depth: mm(9), bevelEnabled: true, bevelThickness: mm(3), bevelSize: mm(2.5), bevelSegments: 3 }), M.knob);
+  star.position.z = mm(14); g.add(star);
+  g.children.forEach(c => c.castShadow = true);
+  g.position.set(mm(x), mm(y), mm(z)); parent.add(g); return g;
+}
+
+// ---------- the chest (x: 0..1050 left→right, y: floor up, z: back 0 → front 480) ----------
+const EX = VIEW === 'exploded';
+const ex = (v) => EX ? v : 0; // explode offsets
+function carcass() {
+  box(0, 1050, 735, 750, 0, 500, TOP, root, 2).position.y += mm(ex(260));                 // sobre
+  box(15, 30, 0, 735, 0, 480, M.white).position.x -= mm(ex(160));                          // costado izq
+  box(1020, 1035, 0, 735, 0, 480, M.white).position.x += mm(ex(160));                      // costado der
+  box(30, 1020, 60, 75, 0, 480, M.whiteIn).position.y -= mm(ex(40));                       // piso
+  box(690, 705, 75, 735, 0, 480, M.whiteIn).position.y += mm(ex(0));                       // división
+  box(30, 1020, 0, 60, 445, 460, M.white).position.set(mm(525), mm(30) - mm(ex(120)), mm(452.5) + mm(ex(200))); // zócalo
+  box(30, 1020, 655, 735, 465, 480, M.whiteIn).position.y += mm(ex(140));                  // travesaño frente
+  box(30, 1020, 655, 735, 0, 15, M.whiteIn).position.y += mm(ex(140));                     // travesaño atrás
+  box(705, 1020, 370, 385, 20, 480, M.whiteIn).position.z += mm(ex(260));                   // repisa
+  const back = box(15, 1035, 0, 735, -3, 0, M.hdf, root, 0.3); back.position.z -= mm(ex(260)); // fondo
+}
+const fronts = [[567, 732], [399, 564], [231, 396], [63, 228]]; // y ranges (from floor)
+function drawer(i, pull) {
+  const [y0, y1] = fronts[i];
+  const g = new THREE.Group(); root.add(g);
+  // box
+  const bx0 = 43, bx1 = 677, by0 = y0 + 22, by1 = by0 + 120, bz0 = 30, bz1 = 480;
+  box(bx0, bx0 + 15, by0, by1, bz0, bz1, M.whiteIn, g);
+  box(bx1 - 15, bx1, by0, by1, bz0, bz1, M.whiteIn, g);
+  box(bx0 + 15, bx1 - 15, by0, by1, bz0, bz0 + 15, M.whiteIn, g);
+  box(bx0 + 15, bx1 - 15, by0, by1, bz1 - 15, bz1, M.whiteIn, g);
+  box(bx0, bx1, by0 - 3, by0, bz0, bz1, M.hdf, g, 0.3);
+  // front
+  box(15, 695, y0, y1, 480, 495, FRONT, g, 1.2);
+  knob(175, (y0 + y1) / 2, 495, g); knob(535, (y0 + y1) / 2, 495, g);
+  // rails (moving part)
+  box(bx0 - 12, bx0, by0 + 40, by0 + 75, bz0 + 10, bz1 - 10, M.metal, g, 0.5);
+  box(bx1, bx1 + 12, by0 + 40, by0 + 75, bz0 + 10, bz1 - 10, M.metal, g, 0.5);
+  // fixed rail part
+  if (pull > 0) {
+    box(30, 34, by0 + 38, by0 + 77, 25, 470, M.metal);
+    box(686, 690, by0 + 38, by0 + 77, 25, 470, M.metal);
+  }
+  g.position.z = mm(pull);
+  if (EX) { g.position.z = mm(420 + i * 30); g.position.y = mm((1.5 - i) * 25); }
+}
+function door(angleDeg) {
+  const pivot = new THREE.Group(); pivot.position.set(mm(1035), 0, mm(495)); root.add(pivot);
+  const d = box(699, 1035, 63, 732, 480, 495, DOOR, pivot, 1.2);
+  d.position.x -= mm(1035); d.position.z -= mm(495);
+  const k = knob(740, 400, 495, pivot); k.position.x -= mm(1035); k.position.z -= mm(495);
+  // hinges (visible when open)
+  for (const hy of [140, 650]) {
+    const h = new THREE.Mesh(new THREE.CylinderGeometry(mm(17.5), mm(17.5), mm(3), 24), M.metal);
+    h.rotation.x = Math.PI / 2; h.position.set(mm(990) - mm(1035), mm(hy), mm(479) - mm(495)); pivot.add(h);
+  }
+  pivot.rotation.y = THREE.MathUtils.degToRad(angleDeg);
+  if (EX) { pivot.position.x += mm(420); pivot.position.z += mm(330); }
+}
+
+carcass();
+if (VIEW === 'open') { drawer(0, 210); drawer(1, 400); drawer(2, 0); drawer(3, 120); door(105); }
+else { for (let i = 0; i < 4; i++) drawer(i, 0); door(0); }
+
+// folded clothes in the open drawer / shelf
+if (VIEW === 'open') {
+  const colors = [0x8fb3d9, 0xf2b8c6, 0xf5e6a8, 0xb9d9b4, 0xd8c4ec];
+  const cloth = (x0, x1, y0, h, z0, z1, c, par) => box(x0, x1, y0, y0 + h, z0, z1, new THREE.MeshStandardMaterial({ color: c, roughness: 0.95 }), par, 12);
+  const g1 = new THREE.Group(); root.add(g1); g1.position.z = mm(400);
+  for (let k = 0; k < 3; k++) cloth(70 + k * 200, 250 + k * 200, 399 + 22, 55, 60, 450, colors[k], g1);
+  const g2 = new THREE.Group(); root.add(g2); g2.position.z = mm(210);
+  for (let k = 0; k < 3; k++) cloth(70 + k * 200, 250 + k * 200, 567 + 22, 45, 60, 450, colors[(k + 2) % 5], g2);
+  for (let k = 0; k < 3; k++) cloth(725, 1000, 385 + k * 60, 55, 90, 440, colors[(k + 3) % 5], root);
+  for (let k = 0; k < 2; k++) cloth(725, 1000, 75 + k * 70, 60, 90, 440, colors[k], root);
+}
+
+// ---------- room ----------
+if (!EX) {
+  const floor = new THREE.Mesh(new THREE.PlaneGeometry(6, 6), M.floor);
+  floor.rotation.x = -Math.PI / 2; floor.position.set(0.5, 0, 1.5); floor.receiveShadow = true; scene.add(floor);
+  const wall = new THREE.Mesh(new THREE.PlaneGeometry(6, 3), M.wall);
+  wall.position.set(0.5, 1.5, -0.02); wall.receiveShadow = true; scene.add(wall);
+  const base = new THREE.Mesh(new THREE.BoxGeometry(6, 0.08, 0.012), new THREE.MeshStandardMaterial({ color: 0xdedad2, roughness: 0.6 }));
+  base.position.set(0.5, 0.04, -0.012); base.receiveShadow = true; scene.add(base);
+} else {
+  const sh = new THREE.Mesh(new THREE.PlaneGeometry(6, 6), M.shadow);
+  sh.rotation.x = -Math.PI / 2; sh.position.y = -mm(170); sh.receiveShadow = true; scene.add(sh);
+}
+
+// ---------- lights ----------
+scene.add(new THREE.HemisphereLight(0xffffff, 0xb8b0a4, 0.3));
+const sun = new THREE.DirectionalLight(0xfff1e0, 2.6);
+sun.position.set(-1.6, 2.4, 2.0); sun.target.position.set(0.5, 0.3, 0.2);
+sun.castShadow = true; sun.shadow.mapSize.set(4096, 4096); sun.shadow.bias = -0.0004; sun.shadow.normalBias = 0.02;
+Object.assign(sun.shadow.camera, { left: -1.6, right: 1.6, top: 1.6, bottom: -1.6, near: 0.5, far: 7 });
+sun.shadow.radius = 6;
+scene.add(sun, sun.target);
+const fill = new THREE.DirectionalLight(0xe6eeff, 0.35); fill.position.set(2.5, 1.2, 2); scene.add(fill);
+
+// ---------- camera ----------
+const cams = {
+  hero: { pos: [2.25, 1.25, 2.45], tgt: [0.5, 0.36, 0.25], fov: 29 },
+  open: { pos: [2.1, 1.45, 2.6], tgt: [0.55, 0.33, 0.4], fov: 31 },
+  color: { pos: [-1.0, 1.15, 2.5], tgt: [0.55, 0.36, 0.25], fov: 29 },
+  front: { pos: [0.525, 0.4, 3.2], tgt: [0.525, 0.38, 0.25], fov: 20 },
+  exploded: { pos: [2.6, 1.75, 3.0], tgt: [0.62, 0.4, 0.45], fov: 34 },
+};
+const c = cams[VIEW] || cams.hero;
+const camera = new THREE.PerspectiveCamera(c.fov, W / H, 0.05, 30);
+camera.position.set(...c.pos); camera.lookAt(...c.tgt);
+renderer.render(scene, camera);
+window.__done = true;
+</script>
+</body></html>
