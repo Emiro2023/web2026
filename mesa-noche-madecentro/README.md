@@ -84,9 +84,9 @@ comprobado que caben. El cálculo está en `despiece.py`.
 | Corte (47 piezas) | $35.000 – $75.000 | $35.000 – $75.000 |
 | Canto + enchape (~35 m) | $90.000 – $170.000 | $90.000 – $170.000 |
 | Rieles: 4 pares de 35 cm + 2 pares de 30 cm | $95.000 – $330.000 | $95.000 – $330.000 |
-| 2 bisagras *(precio web)* | $3.414 – $15.132 | $3.414 – $15.132 |
+| 1 par de bisagras cierre lento Bonuit, parche *(precio web)* | $3.137 | $3.137 |
 | Pomos, pines, tornillería, anclaje | $45.000 – $130.000 | $45.000 – $130.000 |
-| **Total** | **≈ $590.000 – $1.070.000** | **≈ $690.000 – $1.170.000** |
+| **Total** | **≈ $590.000 – $1.060.000** | **≈ $690.000 – $1.160.000** |
 
 **Estimado realista en blanco: ≈ $680.000.** Supone rieles sencillos,
 bisagras eco y las estrellas actuales como pomos.
@@ -103,13 +103,31 @@ usa el 72 % de la melamina y la mesa el 28 %.
 
 | Mueble | Blanco (rango) | **Blanco realista** | **Cartagena realista** |
 |---|---|---|---|
-| Cómoda 90 × 80 × 40 | $420.000 – $750.000 | **≈ $480.000** | **≈ $550.000** |
+| Cómoda 90 × 80 × 40 | $420.000 – $740.000 | **≈ $480.000** | **≈ $550.000** |
 | Mesa de noche 40 × 50,7 × 37,3 | $170.000 – $320.000 | **≈ $200.000** | **≈ $230.000** |
-| **Juego completo** | $590.000 – $1.070.000 | **≈ $680.000** | **≈ $780.000** |
+| **Juego completo** | $590.000 – $1.060.000 | **≈ $680.000** | **≈ $780.000** |
 
 El precio de la mesa aplica si sale del sobrante de la lámina de la cómoda.
 Si la mesa se hace sola, habría que comprarle una lámina entera, y entonces
 sale más cara que la Eter ($239.900).
+
+### Datos de madecentro.com que afectan la compra (sept. 2026)
+
+- **Lámina blanca RH Primadera 2,15 × 2,44, 15 mm:** $266.410 (SKU AGPMRBS215).
+  En la misma página se pueden pedir los **tableros cortados, con cantos y
+  servicios incluidos**. Si tienes tarjeta de cliente Diamante, Oro o Plata,
+  aplica el mismo descuento que en la tienda.
+- **Bisagra de cazoleta cierre lento Bonuit (parche):** $3.137 **por par**,
+  con 12 tornillos y 3 kg por par. Es la adecuada para la puerta de la cómoda:
+  "parche" es la puerta que tapa el costado, y 1 par alcanza.
+- **Canto flexible blanco 19 mm, rollo de 200 m:** $167.200. Para 15 mm sirve
+  el de 19 o el de 22 mm. **No conviene comprar el rollo**: solo se necesitan
+  ~35 m y pegarlo bien en casa es difícil. Mejor pide el **enchape en tienda**.
+- **Envío:** llevan a domicilio en ciudades principales si la compra pasa de
+  **$500.001**; si no, se recoge en un almacén. La entrega tarda de 3 a 8 días
+  hábiles. Comprando **los dos muebles juntos** (≈ $680.000) sí aplica el
+  envío; solo la cómoda (≈ $480.000) no alcanza. Revisa el pedido frente al
+  transportador y reporta faltantes en 48 horas.
 
 ## Herrajes
 

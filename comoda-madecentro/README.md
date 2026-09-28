@@ -107,7 +107,7 @@ tablero. Si en la tienda no cabe con su optimizador, usa la de 2,15 × 2,44 m.
 | Herraje | Cant. | Nota |
 |---|---|---|
 | Riel de extensión total **35 cm** (ideal cierre lento) | 4 pares | Cajón de 543 mm de ancho exterior para riel de 12,7 mm por lado |
-| Bisagra cazoleta 35 mm **recta** (slide on o cierre lento) | 2 | Van en el costado derecho, que la puerta cubre completo |
+| Bisagra cazoleta cierre lento **parche** (Bonuit, $3.137 el par) | 1 par | Van en el costado derecho, que la puerta cubre completo |
 | Pomo / manija | 9 | 2 por cajón + 1 en la puerta (puedes reutilizar las estrellas actuales) |
 | Pin de repisa 5 mm | 4 | |
 | Tornillo para aglomerado 4 × 40 mm | ~50 | Carcasa y cajones |
