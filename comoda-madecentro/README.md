@@ -4,9 +4,9 @@ Réplica mejorada de la cómoda blanca de las fotos: **4 cajones a la izquierda 
 una puerta con repisa a la derecha**. Medidas exteriores **900 mm de ancho ×
 800 mm de alto × 400 mm de fondo**, con **frentes de cajón de 590 × 160 mm**.
 
-> ⚠️ Los precios son **estimados de referencia**, no precios confirmados de
-> Madecentro (no se pudo abrir madecentro.com desde el entorno de trabajo).
-> Cotiza con esta lista de cortes antes de comprar.
+> 💲 Los precios de las **láminas de melamina** son los de madecentro.com
+> (capturas de sept. 2026). El resto (HDF, corte, canto, herrajes) siguen siendo
+> **estimados de referencia**: confírmalos en la tienda.
 
 ![Infografía](infografia.jpg)
 
@@ -16,9 +16,9 @@ una puerta con repisa a la derecha**. Medidas exteriores **900 mm de ancho ×
 |---|---|---|
 | ![](renders/1-cerrada.png) | ![](renders/2-abierta.png) | ![](renders/3-despiece.png) |
 
-| Frente | Variante madera |
+| Frente | Variante Cartagena |
 |---|---|
-| ![](renders/4-frente.png) | ![](renders/5-variante-madera.png) |
+| ![](renders/4-frente.png) | ![](renders/5-variante-cartagena.png) |
 
 Los renders son un modelo 3D a escala real hecho con la lista de cortes
 (`fuente/scene.html`, Three.js; vistas con `?view=hero|open|exploded|front|color`).
@@ -59,7 +59,20 @@ Columnas por dentro: cajones **569 mm** libres, puerta **256 mm** libres.
 
 Medidas en mm (largo × ancho). Canto: L = lado largo, C = lado corto.
 
-### Melamina RH 15 mm blanca — cabe en **1 lámina** de 2,15 × 2,44 m (sobra material)
+### Melamina RH 15 mm blanca — cabe en **1 lámina de 1,83 × 2,44 m** (la más barata)
+
+Despiece verificado en franjas a lo largo de 2440 mm (sierra de 4 mm):
+
+| Franja (alto) | Piezas | Largo usado |
+|---|---|---|
+| 400 mm | sobre + piso + repisa + 3 costados de cajón | 2350 mm |
+| 380 mm | 2 costados + división + 1 costado de cajón | 2348 mm |
+| 649 mm | 4 frentes + puerta + 8 frentes/fondos internos + 4 costados de cajón | 2305 mm |
+| 118 mm | zócalo | 844 mm |
+| 80 mm | 2 travesaños | 1688 mm |
+
+Alto total usado ≈ 1650 mm de 1830 mm: queda margen para el refilado del
+tablero. Si en la tienda no cabe con su optimizador, usa la de 2,15 × 2,44 m.
 
 | # | Pieza | Cant. | Medida | Canto |
 |---|---|---|---|---|
@@ -103,17 +116,39 @@ Medidas en mm (largo × ancho). Canto: L = lado largo, C = lado corto.
 
 | Concepto | Estimado |
 |---|---|
-| 1 lámina melamina RH 15 mm blanca | $230.000 – $320.000 |
+| 1 lámina melamina blanca RH Primadera **1,83 × 2,44** (precio web, −4 %) | **$226.756** |
 | 1 lámina HDF 3 mm | $55.000 – $85.000 |
 | Corte (26–35 piezas) | $25.000 – $50.000 |
 | Canto + enchape (~25 m) | $65.000 – $120.000 |
 | 4 pares de rieles 35 cm | $65.000 (sencillos) – $220.000 (cierre lento) |
 | 2 bisagras | $8.000 – $25.000 |
 | Pomos, pines, tornillería, anclaje | $30.000 – $90.000 |
-| **Total aproximado** | **≈ $480.000 – $910.000** |
+| **Total aproximado** | **≈ $475.000 – $817.000** |
 
-La lámina de melamina queda con bastante sobrante: alcanza para piezas extra
-(por ejemplo, una segunda repisa o una mesita de noche pequeña).
+### Precios de láminas vistos en madecentro.com
+
+| Lámina | Formato | Precio |
+|---|---|---|
+| Aglomerado melamina blanco RH Primadera | 1,83 × 2,44 | $226.756 (antes $236.204) |
+| Aglomerado melamina blanco RH Primadera | 2,15 × 2,44 | $266.410 (antes $277.510) |
+| Aglomerado melamina **Cartagena RH Pelíkano** | 2,15 × 2,44 | $365.872 |
+
+### Variante Cartagena (toda la cómoda en madera clara)
+
+Cambia la lámina blanca por **1 lámina Cartagena RH Pelíkano** ($365.872) y
+pide el **canto en color Cartagena**. Total aproximado **$614.000 – $956.000**.
+Ver render 5.
+
+> Combinar carcasa blanca con frentes Cartagena exige comprar **dos** láminas
+> (≈ $592.000 solo en melamina), así que sale más caro que hacerla toda en un color.
+
+## Recomendaciones de la ficha Pelíkano
+
+- Es para **interiores**: no debe recibir agua directa. Por eso el canto en el
+  borde inferior de los costados y el zócalo alto son importantes al trapear.
+- Resiste manchas (tinta, salsas), rayado y disolventes como alcohol: fácil de
+  limpiar en un cuarto de niños.
+- Está laminado por **ambas caras**, lo que evita que el tablero se tuerza.
 
 ## Armado
 
@@ -129,7 +164,14 @@ La lámina de melamina queda con bastante sobrante: alcanza para piezas extra
 
 ## Variantes fáciles
 
-- **Color:** sobre y frentes en madera (rovere, macadamia) con carcasa blanca
-  (ver render 5; requiere una lámina adicional en color).
+- **Color:** toda en Cartagena (render 5). Otros colores Pelíkano de la carta:
+  Almendra, Amaretto, Azul Marino, Espresso, Moka, Roble Ahumado, Roble Gris,
+  Siena, Cedro, Cerezo, Sangría, Páramo, Acero, Ártiko, Caramelo, Cemento,
+  Ceniza, Lino, Olmo, Oxid, White Chic, Blanco, Negro, Sombra, Mango, Plomo,
+  Coral, Gris, Manzano, Marfil, Olivo, Rovere, Sopelli, Wengue, Nevado,
+  Haya Catedral, Bronce, Miel, Habano y High Gloss (Negro, Beige, Blanco).
+  Esa carta es de Novopan Ecuador (2017): **confirma disponibilidad en Colombia**.
+  Para un cuarto infantil, Coral, Mango o Azul Marino funcionan bien como
+  acento (por ejemplo, solo en los frentes).
 - **Zócalo bajo:** frentes de ~17,5 cm y zócalo de 6 cm.
 - **Sobre más grueso:** en 25–30 mm o doble de 15 mm para que se vea más robusto.

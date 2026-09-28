@@ -64,7 +64,7 @@ function woodTex(base, dark, seed) {
     }
   });
 }
-const rovere = woodTex('#b58d63', 'rgba(90,58,30,A)', 3);
+const rovere = woodTex('#d6bd98', 'rgba(125,95,60,A)', 3); // Cartagena (Pelíkano)
 
 // ---------- materials ----------
 const M = {
@@ -83,6 +83,8 @@ M.woodH = new THREE.MeshStandardMaterial({ map: rovereH, roughness: 0.55 });
 const FRONT = VIEW === 'color' ? M.woodH : M.white;
 const DOOR = VIEW === 'color' ? M.wood : M.white;
 const TOP = VIEW === 'color' ? M.woodH : M.white;
+const SIDE = VIEW === 'color' ? M.wood : M.white;
+const PLINTH = VIEW === 'color' ? M.woodH : M.white;
 
 // ---------- helpers (units: mm → m) ----------
 const mm = v => v / 1000;
@@ -117,11 +119,11 @@ const ex = (v) => EX ? v : 0; // explode offsets
 // Medidas: 900 x 800 x 400 mm; frentes de cajón 590 x 160
 function carcass() {
   box(0, 900, 785, 800, 0, 400, TOP, root, 2).position.y += mm(ex(240));                   // sobre
-  box(15, 30, 0, 785, 0, 380, M.white).position.x -= mm(ex(150));                          // costado izq
-  box(870, 885, 0, 785, 0, 380, M.white).position.x += mm(ex(150));                        // costado der
-  box(30, 870, 118, 133, 0, 380, M.whiteIn).position.y -= mm(ex(40));                      // piso
+  box(15, 30, 0, 785, 0, 380, SIDE).position.x -= mm(ex(150));                          // costado izq
+  box(870, 885, 0, 785, 0, 380, SIDE).position.x += mm(ex(150));                        // costado der
+  box(30, 870, 118, 133, 0, 380, VIEW === "color" ? M.woodH : M.whiteIn).position.y -= mm(ex(40));                      // piso
   box(599, 614, 133, 785, 0, 380, M.whiteIn);                                              // división
-  box(30, 870, 0, 118, 345, 360, M.white).position.set(mm(450), mm(59) - mm(ex(110)), mm(352.5) + mm(ex(180))); // zócalo
+  box(30, 870, 0, 118, 345, 360, PLINTH).position.set(mm(450), mm(59) - mm(ex(110)), mm(352.5) + mm(ex(180))); // zócalo
   box(30, 870, 705, 785, 365, 380, M.whiteIn).position.y += mm(ex(130));                   // travesaño frente
   box(30, 870, 705, 785, 0, 15, M.whiteIn).position.y += mm(ex(130));                      // travesaño atrás
   box(614, 870, 450, 465, 20, 380, M.whiteIn).position.z += mm(ex(240));                   // repisa
