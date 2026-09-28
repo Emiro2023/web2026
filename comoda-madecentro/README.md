@@ -10,6 +10,9 @@ una puerta con repisa a la derecha**. Medidas exteriores **900 mm de ancho ×
 
 ![Infografía](infografia.jpg)
 
+> 🛏️ ¿También quieres la **mesa de noche** que hace juego? Sale del sobrante de la
+> lámina de 2,15 × 2,44: ver [mesa-noche-madecentro](../mesa-noche-madecentro/README.md).
+
 ## Renders
 
 | Cerrada | Abierta | Despiece |

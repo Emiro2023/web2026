@@ -10,6 +10,7 @@ import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.j
 
 const P = new URLSearchParams(location.search);
 const VIEW = P.get('view') || 'hero';
+const MODEL = P.get('model') || 'comoda'; // comoda | mesa | set
 const W = +(P.get('w') || 1600), H = +(P.get('h') || 1200);
 
 const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
@@ -163,6 +164,44 @@ function door(angleDeg) {
   if (EX) { pivot.position.x += mm(360); pivot.position.z += mm(280); }
 }
 
+
+// ---------- mesa de noche 400 x 507 x 373 mm (x 0..400, carcasa z 0..358, frentes 358..373) ----------
+function mesa(ox, pull) {
+  const g = new THREE.Group(); g.position.x = mm(ox); root.add(g);
+  const IN = VIEW === 'color' ? M.woodH : M.whiteIn;
+  box(0, 400, 492, 507, 0, 373, TOP, g, 2);                  // tapa
+  box(0, 15, 0, 492, 0, 358, SIDE, g);                       // costados
+  box(385, 400, 0, 492, 0, 358, SIDE, g);
+  box(15, 385, 70, 85, 0, 358, IN, g);                       // piso
+  box(15, 385, 347, 362, 0, 358, IN, g);                     // repisa del nicho
+  box(15, 385, 0, 70, 323, 338, PLINTH, g);                  // zócalo retrocedido
+  box(15, 385, 412, 492, 0, 15, M.whiteIn, g);               // travesaño trasero
+  box(0, 400, 0, 492, -3, 0, M.hdf, g, 0.3);                 // fondo
+  [[217, 358], [73, 214]].forEach(([y0, y1], i) => {
+    const d = new THREE.Group(); g.add(d);
+    const by0 = y0 + 20, by1 = by0 + 100, bx0 = 28, bx1 = 372, bz0 = 58, bz1 = 358;
+    box(bx0, bx0 + 15, by0, by1, bz0, bz1, M.whiteIn, d);
+    box(bx1 - 15, bx1, by0, by1, bz0, bz1, M.whiteIn, d);
+    box(bx0 + 15, bx1 - 15, by0, by1, bz0, bz0 + 15, M.whiteIn, d);
+    box(bx0 + 15, bx1 - 15, by0, by1, bz1 - 15, bz1, M.whiteIn, d);
+    box(bx0, bx1, by0 - 3, by0, bz0, bz1, M.hdf, d, 0.3);
+    box(bx0 - 12, bx0, by0 + 30, by0 + 65, bz0 + 10, bz1 - 10, M.metal, d, 0.5);
+    box(bx1, bx1 + 12, by0 + 30, by0 + 65, bz0 + 10, bz1 - 10, M.metal, d, 0.5);
+    box(1.5, 398.5, y0, y1, 358, 373, FRONT, d, 1.2);
+    knob(200, (y0 + y1) / 2, 373, d);
+    if (i === 0 && pull) {
+      d.position.z = mm(pull);
+      const colors = [0xf2b8c6, 0x8fb3d9];
+      colors.forEach((c, k) => box(50 + k * 150, 180 + k * 150, by0, by0 + 40, 90, 330, new THREE.MeshStandardMaterial({ color: c, roughness: 0.95 }), d, 10));
+    }
+  });
+  if (VIEW === 'open' || MODEL === 'set') { // libros en el nicho
+    [0xd98f6b, 0x7fa7c9, 0xe8d48f].forEach((c, k) => box(40 + k * 32, 68 + k * 32, 362, 362 + 110 - k * 10, 60, 250, new THREE.MeshStandardMaterial({ color: c, roughness: 0.8 }), g, 2));
+  }
+  return g;
+}
+
+if (MODEL !== 'mesa') {
 carcass();
 if (VIEW === 'open') { drawer(0, 180); drawer(1, 300); drawer(2, 0); drawer(3, 100); door(105); }
 else { for (let i = 0; i < 4; i++) drawer(i, 0); door(0); }
@@ -177,6 +216,10 @@ if (VIEW === 'open') {
   for (let k = 0; k < 3; k++) cloth(630, 855, 465 + k * 60, 55, 60, 350, colors[(k + 3) % 5], root);
   for (let k = 0; k < 3; k++) cloth(630, 855, 133 + k * 65, 60, 60, 350, colors[k], root);
 }
+
+}
+if (MODEL === 'mesa') mesa(0, VIEW === 'open' ? 200 : 0);
+if (MODEL === 'set') mesa(960, 0);
 
 // ---------- room ----------
 if (!EX) {
@@ -209,7 +252,17 @@ const cams = {
   front: { pos: [0.45, 0.42, 3.0], tgt: [0.45, 0.41, 0.2], fov: 20 },
   exploded: { pos: [2.3, 1.7, 2.7], tgt: [0.52, 0.42, 0.38], fov: 34 },
 };
-const c = cams[VIEW] || cams.hero;
+const camsMesa = {
+  hero: { pos: [1.2, 0.9, 1.45], tgt: [0.2, 0.25, 0.18], fov: 29 },
+  open: { pos: [1.15, 1.0, 1.5], tgt: [0.2, 0.24, 0.24], fov: 29 },
+  color: { pos: [-0.75, 0.85, 1.4], tgt: [0.2, 0.25, 0.18], fov: 29 },
+  front: { pos: [0.2, 0.27, 2.0], tgt: [0.2, 0.26, 0.18], fov: 19 },
+};
+const camsSet = {
+  hero: { pos: [2.45, 1.3, 2.75], tgt: [0.66, 0.36, 0.2], fov: 30 },
+  color: { pos: [-0.9, 1.2, 2.8], tgt: [0.7, 0.36, 0.2], fov: 30 },
+};
+const c = (MODEL === 'mesa' ? camsMesa[VIEW] : MODEL === 'set' ? camsSet[VIEW] : cams[VIEW]) || cams.hero;
 const camera = new THREE.PerspectiveCamera(c.fov, W / H, 0.05, 30);
 camera.position.set(...c.pos); camera.lookAt(...c.tgt);
 renderer.render(scene, camera);
