@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -30 520 370" width="520" height="370" font-family="Arial, sans-serif" font-size="10">
+<rect x="-50" y="-30" width="520" height="370" fill="#fff"/>
+<!-- Escala 1 px = 2,5 mm. Cómoda 1050 x 750 x 500 mm, vista frontal -->
+<rect x="14.0" y="276.0" width="392.0" height="24.0" fill="#ddd" stroke="#333" stroke-width="1" />
+<rect x="6.0" y="6.0" width="408.0" height="270.0" fill="#f4f4f4" stroke="#333" stroke-width="1" />
+<rect x="0.0" y="0.0" width="420.0" height="6.0" fill="#e8e8e8" stroke="#333" stroke-width="1" />
+<rect x="6.0" y="7.2" width="272.0" height="66.0" fill="#fafafa" stroke="#333" stroke-width="1" />
+<circle cx="70.0" cy="40.0" r="4" fill="#bbb" stroke="#555"/>
+<circle cx="214.0" cy="40.0" r="4" fill="#bbb" stroke="#555"/>
+<text x="142.0" y="42.400000000000006" text-anchor="middle" fill="#666">Cajón 1</text>
+<rect x="6.0" y="74.4" width="272.0" height="66.0" fill="#fafafa" stroke="#333" stroke-width="1" />
+<circle cx="70.0" cy="107.2" r="4" fill="#bbb" stroke="#555"/>
+<circle cx="214.0" cy="107.2" r="4" fill="#bbb" stroke="#555"/>
+<text x="142.0" y="109.60000000000001" text-anchor="middle" fill="#666">Cajón 2</text>
+<rect x="6.0" y="141.6" width="272.0" height="66.0" fill="#fafafa" stroke="#333" stroke-width="1" />
+<circle cx="70.0" cy="174.4" r="4" fill="#bbb" stroke="#555"/>
+<circle cx="214.0" cy="174.4" r="4" fill="#bbb" stroke="#555"/>
+<text x="142.0" y="176.8" text-anchor="middle" fill="#666">Cajón 3</text>
+<rect x="6.0" y="208.8" width="272.0" height="66.0" fill="#fafafa" stroke="#333" stroke-width="1" />
+<circle cx="70.0" cy="241.60000000000002" r="4" fill="#bbb" stroke="#555"/>
+<circle cx="214.0" cy="241.60000000000002" r="4" fill="#bbb" stroke="#555"/>
+<text x="142.0" y="244.0" text-anchor="middle" fill="#666">Cajón 4</text>
+<rect x="279.6" y="7.2" width="134.4" height="267.6" fill="#fafafa" stroke="#333" stroke-width="1" />
+<circle cx="296.0" cy="140.0" r="4" fill="#bbb" stroke="#555"/>
+<text x="346.8" y="130.0" text-anchor="middle" fill="#666">Puerta</text>
+<text x="346.8" y="146.0" text-anchor="middle" fill="#666">(1 repisa)</text>
+<rect x="408.0" y="36.0" width="4" height="10" fill="#888"/>
+<rect x="408.0" y="240.0" width="4" height="10" fill="#888"/>
+<g stroke="#c33" fill="#c33" text-anchor="middle"><line x1="0" y1="310.0" x2="420.0" y2="310.0"/><text x="210.0" y="322.0" stroke="none">1050 mm</text>
+<line x1="-16.0" y1="0" x2="-16.0" y2="300.0"/><text x="-28.0" y="150.0" stroke="none" transform="rotate(-90 -28.0 150.0)">750 mm (fondo 500)</text>
+<line x1="6.0" y1="-12.0" x2="278.0" y2="-12.0"/><text x="142.0" y="-18.0" stroke="none">cajones 680</text>
+<line x1="279.6" y1="-12.0" x2="414.0" y2="-12.0"/><text x="346.8" y="-18.0" stroke="none">puerta 336</text></g>
+</svg>
