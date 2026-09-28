@@ -56,27 +56,24 @@ Renders 3D a escala real: `../comoda-madecentro/fuente/scene.html?model=mesa`
 
 **Canto:** ~10 m más.
 
-## ¿Cuántas láminas? Cómoda + mesa de noche juntas
+## Compra: **1 sola lámina** para cómoda + mesa de noche
 
-| Lámina | Solo cómoda | **Cómoda + mesa** |
+| Lámina | Cantidad | Precio web |
 |---|---|---|
-| Melamina RH 15 mm | 1 de 1,83 × 2,44 ($226.756 blanca) | **1 de 2,15 × 2,44** ($266.410 blanca / $365.872 Cartagena) |
-| HDF 3 mm | 1 | **1** (la misma, sobra espacio) |
+| Melamina RH 15 mm **2,15 × 2,44 m** (el mismo color para los dos muebles) | **1** | $266.410 blanca / $365.872 Cartagena |
+| HDF 3 mm | **1** | fondos y bases de cajón de ambos |
 
-La mesa se saca de la **franja de 499 mm** que sobra al cortar la cómoda en la
-lámina grande. Los costados de la mesa (492 mm) caben a lo ancho de esa franja.
-Algunas piezas pequeñas de los cajones van en los retazos de la cómoda:
+Las **47 piezas** (30 de la cómoda y 17 de la mesa) caben en la lámina con
+**1 cm de refilado por borde** y **4 mm de sierra**. Todos los cortes son de
+tipo guillotina, como los de la seccionadora de Madecentro, y se aprovecha el
+**85 %** de la lámina.
 
-| Dónde | Piezas de la mesa | Largo usado |
-|---|---|---|
-| Franja libre (499 mm) | 2 costados, tapa, piso, repisa, 2 frentes, zócalo, travesaño, 1 costado de cajón | ≈ 2.380 de 2.440 mm |
-| Retazo franja zócalo cómoda (118 mm) | 3 costados de cajón + 2 frentes/fondos internos | ≈ 2.390 de 2.440 mm |
-| Retazo franja frentes cómoda (649 mm) | 2 frentes/fondos internos | 104 de 135 mm libres |
+![Despiece en 1 lámina](despiece-1-lamina.png)
 
-⚠️ **Queda muy justo.** Pide en Madecentro que el optimizador acomode las dos
-listas en una sola lámina de 2,15 × 2,44. Si no cabe, la alternativa es
-**1 lámina de 1,83 × 2,44 para la cómoda + 1 de 1,83 × 2,44 para la mesa**
-(y te sobra bastante para otra mesa de noche o repisas).
+Lleva este plano (`despiece-1-lamina.png`) con las dos listas de cortes y pide
+que corten **las dos listas en la misma lámina**. El optimizador de la tienda
+puede acomodar las piezas de otra forma; lo importante es que ya está
+comprobado que caben. El cálculo está en `despiece.py`.
 
 ## Herrajes
 
