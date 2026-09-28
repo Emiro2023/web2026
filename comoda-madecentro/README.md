@@ -104,7 +104,7 @@ tablero. Si en la tienda no cabe con su optimizador, usa la de 2,15 × 2,44 m.
 | Herraje | Cant. | Nota |
 |---|---|---|
 | Riel de extensión total **35 cm** (ideal cierre lento) | 4 pares | Cajón de 543 mm de ancho exterior para riel de 12,7 mm por lado |
-| Bisagra cazoleta 35 mm **recta** (cierre lento) | 2 | Van en el costado derecho, que la puerta cubre completo |
+| Bisagra cazoleta 35 mm **recta** (slide on o cierre lento) | 2 | Van en el costado derecho, que la puerta cubre completo |
 | Pomo / manija | 9 | 2 por cajón + 1 en la puerta (puedes reutilizar las estrellas actuales) |
 | Pin de repisa 5 mm | 4 | |
 | Tornillo para aglomerado 4 × 40 mm | ~50 | Carcasa y cajones |
@@ -121,9 +121,43 @@ tablero. Si en la tienda no cabe con su optimizador, usa la de 2,15 × 2,44 m.
 | Corte (26–35 piezas) | $25.000 – $50.000 |
 | Canto + enchape (~25 m) | $65.000 – $120.000 |
 | 4 pares de rieles 35 cm | $65.000 (sencillos) – $220.000 (cierre lento) |
-| 2 bisagras | $8.000 – $25.000 |
+| 2 bisagras (precio web: $1.707 eco – $7.566 c/u) | **$3.414 – $15.132** |
 | Pomos, pines, tornillería, anclaje | $30.000 – $90.000 |
-| **Total aproximado** | **≈ $475.000 – $817.000** |
+| **Total aproximado** | **≈ $470.000 – $807.000** |
+
+### Herrajes vistos en madecentro.com (sept. 2026, con −25 %)
+
+| Producto | Marca | Precio | ¿Sirve para esta cómoda? |
+|---|---|---|---|
+| Bisagra de cazoleta eco slide on | Mobile | $1.707 c/u | ✅ Opción más barata para la puerta (2 und.) |
+| Bisagra de cazoleta slide on 110° | Bonuit | $3.061 – $3.104 c/u | ✅ Mejor calidad, gris o negra |
+| Otras bisagras de cazoleta (nombre cortado en la captura) | — | $4.875 y $7.566 c/u | Probablemente clip-on / cierre lento: confirma en la ficha |
+| **Costado metálico para cajón MAX bajo** | Bonuit | $82.237 – $85.340 por cajón | ⭐ Opción premium (ver abajo) |
+| Otro producto de la misma línea (nombre no visible) | Bonuit | $31.033 – $46.549 | Confirma qué es antes de contarlo |
+| Push to open con imán / con enganche uña | Bonuit | $3.030 / $3.026 | Solo para la **puerta**, si quieres quitarle el pomo |
+| Canto semirrígido **alto brillo** 22 mm × 1 mm, rollo 20 m (blanco, blanco metálico, latte, gris meteoro) | Rehau | $175.912 | ❌ **No lo necesitas** (ver nota) |
+
+**Cajones: dos caminos**
+
+1. **Económico (recomendado):** cajón de melamina como en la lista de cortes +
+   rieles telescópicos de 35 cm. Total ≈ **$470.000 – $807.000**.
+2. **Premium: Bonuit MAX bajo.** Es un sistema de cajón con costados metálicos y
+   riel incorporado (extensión total y cierre suave). Con 4 cajones cuesta
+   $328.948 – $341.360 en lugar de los rieles, y el total queda en
+   ≈ **$734.000 – $928.000**. Si lo eliges, **no se cortan** los 8 costados de
+   cajón de melamina. La base y la trasera del cajón se cortan con las medidas
+   de la **ficha técnica Bonuit** para un largo nominal de 350 mm y 569 mm de
+   ancho interior. Pídela en la tienda antes del corte.
+
+**Nota sobre el canto Rehau alto brillo:** es para tableros MDF alto brillo. En
+melamina mate se ve distinto, el rollo trae 20 m (a esta cómoda le faltarían
+unos 5 m) y cuesta $175.912. Es más barato pedir el **servicio de enchape**
+con el canto PVC del mismo color de la melamina: Madecentro lo cobra por metro
+y ya lo pega en máquina.
+
+**Push to open:** sirve para la puerta. En los cajones choca con los rieles
+de cierre lento, porque para eso se usan rieles *push open* especiales. Para
+una cómoda infantil, los pomos de estrella siguen siendo lo más práctico.
 
 ### Precios de láminas vistos en madecentro.com
 
@@ -136,7 +170,7 @@ tablero. Si en la tienda no cabe con su optimizador, usa la de 2,15 × 2,44 m.
 ### Variante Cartagena (toda la cómoda en madera clara)
 
 Cambia la lámina blanca por **1 lámina Cartagena RH Pelíkano** ($365.872) y
-pide el **canto en color Cartagena**. Total aproximado **$614.000 – $956.000**.
+pide el **canto en color Cartagena**. Total aproximado **$609.000 – $946.000**.
 Ver render 5.
 
 > Combinar carcasa blanca con frentes Cartagena exige comprar **dos** láminas
