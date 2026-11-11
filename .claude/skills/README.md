@@ -33,3 +33,12 @@ commit `19392f7a08264ed00486a251f5b2098321771f94`. MIT license: see
 They cover architecture, frontend, backend, fullstack, QA, TDD, code review, DevOps,
 cloud (AWS, Azure, GCP), security, incident response, data, ML and Stripe. Start from
 `engineering-skills/SKILL.md` for an index.
+
+## AV SoundAI (skills propios)
+
+| Skill | Para qué sirve |
+| --- | --- |
+| `av-soundai-letras` | Componer, revisar y adaptar letras en español para Suno: versos, coros, rimas consonantes/asonantes, métrica cantable y estructura por género (salsa brava, reggae, dancehall, hip hop, fusión). |
+
+Escrito desde cero para este repo; las fuentes de inspiración y sus licencias están en
+`av-soundai-letras/references/recursos.md`.
